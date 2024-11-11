@@ -129,6 +129,7 @@
     rustc
     go
     git
+    gh
     cmake
     gcc
     gnumake
