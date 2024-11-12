@@ -26,7 +26,7 @@
             ];
         };
 
-       homeConfigurations.zax = home-manager.lib.homemanagerConfiguration {
+       homeConfigurations.zax = home-manager.lib.homeManagerConfiguration {
            pkgs = nixpkgs.legacyPackages.${system};
            modules = [ ./home-manager/home.nix ];
        };
