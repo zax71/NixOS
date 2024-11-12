@@ -22,8 +22,7 @@
             inherit system;
             modules = [
                 ./nixos/configuration.nix
-                # disko.nixosModules.disko
-                "${disko}/module.nix"
+                disko.nixosModules.disko
             ];
         };
 

@@ -8,9 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      # "${builtins.fetchTarball "https://github.com/nix-community/disko/archive/master.tar.gz"}/module.nix" # Install Disko
       ./disk-config.nix
-      "${disko}/module.nix"
     ];
   
   # Enable flakes
@@ -92,6 +90,7 @@
     extraGroups = [ "wheel" "audio" ]; # Enable ‘sudo’ for the user.
   };
 
+  nixpkgs.config.allowUnfree = true;
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -104,6 +103,8 @@
     wget
     bat
     eza
+    unzip
+    zip
 
     # Nvim deps
     ripgrep
@@ -133,6 +134,11 @@
     cmake
     gcc
     gnumake
+    godot_4
+
+    # Art
+    aseprite
+    gimp
   ];
 
   nixpkgs.config.qt5 = {
