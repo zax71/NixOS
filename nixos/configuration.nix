@@ -8,7 +8,9 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./packages.nix
       ./disk-config.nix
+
     ];
   
   # Enable flakes
@@ -41,7 +43,6 @@
   #   useXkbConfig = true; # use xkb.options in tty.
   };
 
- 
 
   # Enable the X11 windowing system and AwesomeWM
   services={
@@ -81,6 +82,14 @@
     options snd_hda_intel enable=0,1
   '';
 
+  # Screen tearing fix I hope
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+  };
+
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
   
@@ -92,66 +101,6 @@
     extraGroups = [ "wheel" "audio" ]; # Enable ‘sudo’ for the user.
   };
 
-  nixpkgs.config.allowUnfree = true;
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    picom
-    home-manager
-
-    # CLI apps
-    vim 
-    neovim
-    wget
-    bat
-    eza
-    unzip
-    zip
-
-    # Nvim deps
-    ripgrep
-
-    # Desktop applications
-    firefox
-    prismlauncher
-    vlc
-    kitty
-
-    # KDE stuff
-    dolphin
-    kdePackages.qtsvg
-    kdePackages.kio-fuse
-    kdePackages.kio-extras
-    libsForQt5.qtstyleplugin-kvantum
-    libsForQt5.qt5ct
-
-    # Dev tools
-    nodePackages.pnpm
-    python313
-    cargo
-    rustc
-    go
-    git
-    gh
-    cmake
-    gcc
-    gnumake
-    godot_4
-
-    # Art
-    aseprite
-    gimp
-  ];
-
-  nixpkgs.config.qt5 = {
-    enable = true;
-    platformTheme = "qt5ct"; 
-      style = {
-        package = pkgs.kdePackages.breeze;
-        name = "Breeze";
-      };
-  };
-  
   environment.variables = {
     AWESOME_THEMES_PATH = "/home/zax/.config/awesome/themes";
     QT_QPA_PLATFORMTHEME = "qt5ct";
