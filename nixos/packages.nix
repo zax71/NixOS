@@ -2,7 +2,7 @@
     nixpkgs.config.allowUnfree = true;
 
     environment.systemPackages = with pkgs; [
-        picom
+        #picom
         home-manager
 
         # CLI apps

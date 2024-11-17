@@ -43,11 +43,23 @@
   #   useXkbConfig = true; # use xkb.options in tty.
   };
 
+  # Middle click scroll
+  services.libinput = {
+    enable = true;
+    mouse = {
+      scrollMethod = "button";
+      scrollButton = 2;
+    };
+  };
 
   # Enable the X11 windowing system and AwesomeWM
   services={
     xserver = {
+        
       enable = true;
+      deviceSection = ''
+            Option "TearFree" "true"
+      '';
       xkb = {
         layout = "gb";
       };
@@ -66,11 +78,11 @@
     };
   };
 
-  # fileSystems."/mnt/truenas" = {
-  #   device = "//192.168.0.16/share";
-  #   fsType = "cifs";
-  #   options = [ "username=zax" "password=<tmp>" "x-systemd.automount" "noauto" ];
-  # };
+   # fileSystems."/mnt/truenas" = {
+   #   device = "//192.168.0.106/share";
+   #   fsType = "cifs";
+   #   options = [ "username=zax" "password=<nah you can't see this>" "x-systemd.automount" "noauto" ];
+   # };
 
   
   # Enable CUPS to print documents.
@@ -92,8 +104,8 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
-  
   programs.zsh.enable = true;
+  
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.zax = {
     shell = pkgs.zsh;
