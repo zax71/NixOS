@@ -13,6 +13,9 @@
         eza
         unzip
         zip
+        fzf
+        fastfetch
+        cmus
 
         # Nvim deps
         ripgrep
@@ -49,6 +52,7 @@
         gcc
         gnumake
         godot_4
+        jetbrains.idea-community
 
         # Art
         aseprite
