@@ -55,6 +55,7 @@
         xserver = {
             enable = true;
             deviceSection = ''Option "TearFree" "true"'';
+            videoDrivers = ["modesetting"];
             xkb = {
                 layout = "gb";
             };
@@ -81,8 +82,6 @@
         };
 
         # openssh.enable = true;
-  };
-
     };
 
     # fileSystems."/mnt/truenas" = {

@@ -2,6 +2,7 @@
     imports = [
         ./zsh.nix
         ./theme.nix
+        ./picom.nix
         # ./modules/bundle.nix
     ];
     home = {
@@ -10,6 +11,5 @@
         stateVersion = "24.05";
     };
 
-    services.picom.enable = true;
     
 }
