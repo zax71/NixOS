@@ -2,7 +2,6 @@
     nixpkgs.config.allowUnfree = true;
 
     environment.systemPackages = with pkgs; [
-        #picom
         home-manager
 
         # CLI apps
@@ -16,6 +15,8 @@
         fzf
         fastfetch
         cmus
+        jdk
+        sshfs
 
         # Nvim deps
         ripgrep
@@ -26,6 +27,9 @@
         vlc
         kitty
         flameshot
+        libreoffice
+        zotero
+        via
         (discord.override {
           withVencord = true;
         })
