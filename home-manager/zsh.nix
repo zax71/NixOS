@@ -14,7 +14,7 @@
             ll = "eza -l -a --icons=always";
             tree = "ls --tree --git-ignore";
             cat = "bat";
-            # vim = "nvim";
+	    nvim = "nix run ${flakeDir}/nvim --";
             update = "sudo nixos-rebuild switch --flake ${flakeDir}";
             update-home-manager = "home-manager switch --flake ${flakeDir}";
         };

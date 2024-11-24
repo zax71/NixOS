@@ -6,7 +6,6 @@
 
         # CLI apps
         vim 
-        neovim
         wget
         bat
         eza
@@ -30,6 +29,7 @@
         libreoffice
         zotero
         via
+        obsidian
         (discord.override {
           withVencord = true;
         })
