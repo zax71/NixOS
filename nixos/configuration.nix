@@ -2,140 +2,150 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
-    imports = [ 
-            # Include the results of the hardware scan.
-            ./hardware-configuration.nix
-            ./packages.nix
-            ./disk-config.nix
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./packages.nix
+    ./disk-config.nix
+  ];
+
+  # Enable flakes
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+
+  # Use GRUB
+  boot.loader = {
+    efi = {
+      canTouchEfiVariables = true;
+    };
+    grub = {
+      enable = true;
+      efiSupport = true;
+      device = "/dev/sda";
+    };
+  };
+
+  # Networking
+  networking.hostName = "z-pc";
+  networking.networkmanager.enable = true;
+
+  # i18n
+  time.timeZone = "Europe/London";
+  i18n.defaultLocale = "en_GB.UTF-8";
+
+  console = {
+    # font = "Lat2-Terminus16";
+    keyMap = "uk";
+    # useXkbConfig = true; # use xkb.options in tty.
+  };
+
+  # Middle click scroll
+  services.libinput = {
+    enable = true;
+    mouse = {
+      scrollMethod = "button";
+      scrollButton = 2;
+    };
+  };
+
+  services = {
+    # Enable the X11 windowing system and AwesomeWM
+    xserver = {
+      enable = true;
+      deviceSection = ''Option "TearFree" "true"'';
+      videoDrivers = [ "modesetting" ];
+      xkb = {
+        layout = "gb";
+      };
+      windowManager.awesome = {
+        enable = true;
+        luaModules = with pkgs.luaPackages; [
+          luarocks # is the package manager for Lua modules
+          luadbi-mysql # Database abstraction layer
         ];
-  
-    # Enable flakes
-    nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-    # Use GRUB
-    boot.loader = {
-        efi = {
-            canTouchEfiVariables = true;
-        };
-        grub = {
-            enable = true;
-            efiSupport = true;
-            device = "/dev/sda";
-        };
-    };
-    
-    # Networking
-    networking.hostName = "z-pc";
-    networking.networkmanager.enable = true;
-
-    # i18n
-    time.timeZone = "Europe/London";
-    i18n.defaultLocale = "en_GB.UTF-8";
-
-    console = {
-        # font = "Lat2-Terminus16";
-        keyMap = "uk";
-        # useXkbConfig = true; # use xkb.options in tty.
+      };
     };
 
-    # Middle click scroll
-    services.libinput = {
-        enable = true;
-        mouse = {
-            scrollMethod = "button";
-            scrollButton = 2;
-        };
+    displayManager = {
+      sddm.enable = true;
+      defaultSession = "none+awesome";
     };
 
-    services={
-        # Enable the X11 windowing system and AwesomeWM
-        xserver = {
-            enable = true;
-            deviceSection = ''Option "TearFree" "true"'';
-            videoDrivers = ["modesetting"];
-            xkb = {
-                layout = "gb";
-            };
-            windowManager.awesome = {
-                enable = true;
-	            luaModules = with pkgs.luaPackages; [
-	                luarocks # is the package manager for Lua modules
-	                luadbi-mysql # Database abstraction layer
-	            ];
-            };
-        };
-    
-        displayManager = {
-            sddm.enable = true;
-            defaultSession = "none+awesome";
-        };
-
-        # Printing
-        printing.enable = true; # CUPS
-        avahi = {
-            enable = true;
-            nssmdns4 = true;
-            openFirewall = true;
-        };
-
-        # openssh.enable = true;
+    # Printing
+    printing.enable = true; # CUPS
+    avahi = {
+      enable = true;
+      nssmdns4 = true;
+      openFirewall = true;
     };
 
-    # fileSystems."/mnt/truenas" = {
-    #   device = "//192.168.0.106/share";
-    #   fsType = "cifs";
-    #   options = [ "username=zax" "password=<password>" "x-systemd.automount" "noauto" ];
-    # };
+    # openssh.enable = true;
+  };
 
-    # Sound
-    hardware.pulseaudio.enable = true;
-    boot.extraModprobeConfig = ''
-        options snd_hda_intel enable=0,1
-    '';
+  # fileSystems."/mnt/truenas" = {
+  #   device = "//192.168.0.106/share";
+  #   fsType = "cifs";
+  #   options = [ "username=zax" "password=<password>" "x-systemd.automount" "noauto" ];
+  # };
 
-    # Screen tearing fix I hope
-    hardware.opengl = {
-        enable = true;
-        driSupport = true;
-        driSupport32Bit = true;
-    };
+  # Sound
+  hardware.pulseaudio.enable = true;
+  boot.extraModprobeConfig = ''
+    options snd_hda_intel enable=0,1
+  '';
 
+  # Screen tearing fix I hope
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+  };
 
-    programs.zsh.enable = true;
-    programs.dconf.enable = true;
+  programs.zsh.enable = true;
+  programs.dconf.enable = true;
+  programs.steam.enable = true;
 
-    # Define a user account. Don't forget to set a password with ‘passwd’.
-    users.users.zax = {
-        shell = pkgs.zsh;
-        isNormalUser = true;
-        extraGroups = [ "wheel" "audio" ]; # Enable ‘sudo’ for the user.
-    };
+  # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.users.zax = {
+    shell = pkgs.zsh;
+    isNormalUser = true;
+    extraGroups = [
+      "wheel"
+      "audio"
+    ]; # Enable ‘sudo’ for the user.
+  };
 
-    environment.variables = {
-        AWESOME_THEMES_PATH = "/home/zax/.config/awesome/themes";
-        QT_QPA_PLATFORMTHEME = "qt5ct";
-        GTK_THEME="Adwaita:dark";
-    };
-    # Fonts
-    fonts.packages = with pkgs; [
-        ( nerdfonts.override {
-            fonts = [
-            "JetBrainsMono"
-            ];
-        })
-    ];
+  environment.variables = {
+    AWESOME_THEMES_PATH = "/home/zax/.config/awesome/themes";
+    QT_QPA_PLATFORMTHEME = "qt5ct";
+    GTK_THEME = "Adwaita:dark";
+  };
+  # Fonts
+  fonts.packages = with pkgs; [
+    (nerdfonts.override {
+      fonts = [
+        "JetBrainsMono"
+      ];
+    })
+  ];
 
-
-    # Some programs need SUID wrappers, can be configured further or are
-    # started in user sessions.
-    # programs.mtr.enable = true;
-    # programs.gnupg.agent = {
-    #   enable = true;
-    #   enableSSHSupport = true;
-    # };
+  # Some programs need SUID wrappers, can be configured further or are
+  # started in user sessions.
+  # programs.mtr.enable = true;
+  # programs.gnupg.agent = {
+  #   enable = true;
+  #   enableSSHSupport = true;
+  # };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -168,4 +178,3 @@
   system.stateVersion = "24.05"; # Did you read the comment?
 
 }
-
