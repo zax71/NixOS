@@ -19,6 +19,7 @@
         nvim = "nix run ${flakeDir}/nvim --";
         update = "sudo nixos-rebuild switch --flake ${flakeDir}";
         update-home-manager = "home-manager switch --flake ${flakeDir}";
+        htop = "btop";
       };
 
     history = {

@@ -111,9 +111,15 @@
     driSupport32Bit = true;
   };
 
-  programs.zsh.enable = true;
-  programs.dconf.enable = true;
-  programs.steam.enable = true;
+  programs = {
+    java = {
+      enable = true;
+      package = pkgs.jdk22;
+    };
+    zsh.enable = true;
+    dconf.enable = true;
+    steam.enable = true;
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.zax = {
@@ -129,15 +135,27 @@
     AWESOME_THEMES_PATH = "/home/zax/.config/awesome/themes";
     QT_QPA_PLATFORMTHEME = "qt5ct";
     GTK_THEME = "Adwaita:dark";
+    _JAVA_OPTIONS = "-Dawt.useSystemAAFontSettings=lcd";
   };
   # Fonts
-  fonts.packages = with pkgs; [
-    (nerdfonts.override {
-      fonts = [
-        "JetBrainsMono"
-      ];
-    })
-  ];
+  fonts = {
+    packages = with pkgs; [
+      monocraft
+      inter
+      noto-fonts
+      (nerdfonts.override {
+        fonts = [
+          "JetBrainsMono"
+        ];
+      })
+    ];
+
+    fontconfig.defaultFonts = {
+      serif = [ "Noto Serif" ];
+      sansSerif = [ "Inter" ];
+      monospace = [ "JetBrainsMono NF Regular" ];
+    };
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

@@ -15,8 +15,8 @@
     fzf
     fastfetch
     cmus
-    jdk
     sshfs
+    btop
 
     # Nvim deps
     ripgrep
@@ -31,12 +31,15 @@
     zotero
     via
     obsidian
+    rsibreak
+    vscode
     (discord.override {
       withVencord = true;
     })
 
     # KDE stuff
     dolphin
+    kdePackages.breeze
     kdePackages.qtsvg
     kdePackages.kio-fuse
     kdePackages.kio-extras
