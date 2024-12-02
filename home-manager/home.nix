@@ -3,6 +3,7 @@
     ./zsh.nix
     ./theme.nix
     ./picom.nix
+    ./direnv.nix
     # ./modules/bundle.nix
   ];
   home = {
