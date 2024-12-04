@@ -17,6 +17,7 @@
     cmus
     sshfs
     btop
+    alsa-utils
 
     # Nvim deps
     ripgrep
@@ -46,7 +47,7 @@
     kdePackages.qtstyleplugin-kvantum
 
     # GNOME stuff
-    gnome.nautilus
+    nautilus
 
     # Dev tools
     nodePackages.pnpm

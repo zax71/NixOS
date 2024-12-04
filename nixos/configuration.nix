@@ -99,22 +99,20 @@
   # };
 
   # Sound
-  hardware.pulseaudio.enable = true;
+  # hardware.pulseaudio.enable = true;
   boot.extraModprobeConfig = ''
     options snd_hda_intel enable=0,1
   '';
 
   # Screen tearing fix I hope
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
   };
 
   programs = {
     java = {
       enable = true;
-      package = pkgs.jdk22;
+      package = pkgs.jdk23;
     };
     zsh.enable = true;
     dconf.enable = true;
