@@ -34,6 +34,8 @@
     obsidian
     rsibreak
     vscode
+    bottles
+    audacity
     (discord.override {
       withVencord = true;
     })

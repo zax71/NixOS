@@ -4,7 +4,7 @@
     ./theme.nix
     ./picom.nix
     ./direnv.nix
-    # ./modules/bundle.nix
+    ./ohmyposh.nix
   ];
   home = {
     username = "zax";
