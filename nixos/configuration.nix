@@ -15,6 +15,7 @@
     ./hardware-configuration.nix
     ./packages.nix
     ./disk-config.nix
+    ./java.nix
   ];
 
   # Enable flakes
@@ -112,7 +113,13 @@
   programs = {
     java = {
       enable = true;
-      package = pkgs.jdk23;
+      additionalRuntimes = {
+        jdk23 = (pkgs.jdk23.override { enableJavaFX = true; });
+        jdk21 = pkgs.jdk21;
+        jdk17 = pkgs.jdk17;
+        jdk8 = pkgs.jdk8;
+      };
+      package = pkgs.jdk21;
     };
     zsh.enable = true;
     dconf.enable = true;
@@ -133,7 +140,6 @@
     AWESOME_THEMES_PATH = "/home/zax/.config/awesome/themes";
     QT_QPA_PLATFORMTHEME = "qt5ct";
     GTK_THEME = "Adwaita:dark";
-    _JAVA_OPTIONS = "-Dawt.useSystemAAFontSettings=lcd";
   };
   # Fonts
   fonts = {

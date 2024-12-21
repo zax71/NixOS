@@ -41,41 +41,7 @@
         "type": "github"
       }
     },
-    "jetbrains": {
-      "inputs": {
-        "nixpkgs": "nixpkgs"
-      },
-      "locked": {
-        "lastModified": 1734065730,
-        "narHash": "sha256-7GUNma3O+UJ2jRhWJ3D8qvIH9PAnKwI+gbi5Et2vDvI=",
-        "owner": "liff",
-        "repo": "jetbrains-flake",
-        "rev": "1eea05deb681d3aaa4060814e37bdc01475275fd",
-        "type": "github"
-      },
-      "original": {
-        "owner": "liff",
-        "repo": "jetbrains-flake",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
-      "locked": {
-        "lastModified": 1691472822,
-        "narHash": "sha256-XVfYZ2oB3lNPVq6sHCY9WkdQ8lHoIDzzbpg8bB6oBxA=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "41c7605718399dcfa53dd7083793b6ae3bc969ff",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_2": {
       "locked": {
         "lastModified": 1733261153,
         "narHash": "sha256-eq51hyiaIwtWo19fPEeE0Zr2s83DYMKJoukNLgGGpek=",
@@ -95,8 +61,7 @@
       "inputs": {
         "disko": "disko",
         "home-manager": "home-manager",
-        "jetbrains": "jetbrains",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs"
       }
     }
   },

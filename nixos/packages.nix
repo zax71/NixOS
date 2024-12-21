@@ -63,7 +63,7 @@
     gcc
     gnumake
     godot_4
-    # intellij-idea-community # See https://github.com/liff/jetbrains-flake/issues/53
+    jetbrains.idea-community
 
     # Art
     aseprite

@@ -13,8 +13,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    jetbrains.url = "github:liff/jetbrains-flake";
-
   };
 
   outputs =
@@ -22,7 +20,6 @@
       self,
       nixpkgs,
       home-manager,
-      jetbrains,
       ...
     }@inputs:
     let
@@ -34,7 +31,6 @@
         modules = [
           ./nixos/configuration.nix
           inputs.disko.nixosModules.disko
-          jetbrains.nixosModules.default
         ];
       };
 
