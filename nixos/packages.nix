@@ -72,5 +72,9 @@
     # Xorg deps
     libxkbcommon
     fontconfig
+
+    # Games
+    superTuxKart
+    flightgear
   ];
 }

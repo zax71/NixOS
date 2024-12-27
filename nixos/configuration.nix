@@ -39,6 +39,15 @@
   # Networking
   networking.hostName = "z-pc";
   networking.networkmanager.enable = true;
+  networking.firewall = {
+    enable = true;
+    allowedUDPPortRanges = [
+      {
+        from = 4646;
+        to = 4647;
+      }
+    ];
+  };
 
   # i18n
   time.timeZone = "Europe/London";
@@ -115,7 +124,7 @@
       enable = true;
       additionalRuntimes = {
         jdk23 = (pkgs.jdk23.override { enableJavaFX = true; });
-        jdk21 = pkgs.jdk21;
+        jdk21 = (pkgs.jdk21.override { enableJavaFX = true; });
         jdk17 = pkgs.jdk17;
         jdk8 = pkgs.jdk8;
       };
@@ -126,6 +135,8 @@
     steam.enable = true;
   };
 
+  virtualisation.docker.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.zax = {
     shell = pkgs.zsh;
@@ -133,6 +144,7 @@
     extraGroups = [
       "wheel"
       "audio"
+      "docker"
     ]; # Enable ‘sudo’ for the user.
   };
 
