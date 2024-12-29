@@ -5,6 +5,7 @@
     ./picom.nix
     ./direnv.nix
     ./ohmyposh.nix
+    ./kitty.nix
   ];
   home = {
     username = "zax";
