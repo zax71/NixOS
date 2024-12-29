@@ -18,13 +18,13 @@
     sshfs
     btop
     alsa-utils
+    lazygit
 
     # Nvim deps
     ripgrep
 
     # Desktop applications
     firefox
-    prismlauncher
     vlc
     kitty
     flameshot
@@ -36,6 +36,7 @@
     vscode
     bottles
     audacity
+    blender
     (discord.override {
       withVencord = true;
     })
@@ -50,6 +51,7 @@
 
     # GNOME stuff
     nautilus
+    gtk3
 
     # Dev tools
     nodePackages.pnpm
@@ -76,5 +78,6 @@
     # Games
     superTuxKart
     flightgear
+    prismlauncher
   ];
 }

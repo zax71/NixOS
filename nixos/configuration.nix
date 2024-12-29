@@ -152,6 +152,7 @@
     AWESOME_THEMES_PATH = "/home/zax/.config/awesome/themes";
     QT_QPA_PLATFORMTHEME = "qt5ct";
     GTK_THEME = "Adwaita:dark";
+    GSETTINGS_SCHEMA_DIR = "${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}/glib-2.0/schemas";
   };
   # Fonts
   fonts = {
