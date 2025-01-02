@@ -19,6 +19,7 @@
     btop
     alsa-utils
     lazygit
+    tldr
 
     # Nvim deps
     ripgrep
@@ -37,6 +38,7 @@
     bottles
     audacity
     blender
+    nomacs # Image viewer
     (discord.override {
       withVencord = true;
     })
@@ -66,6 +68,7 @@
     gnumake
     godot_4
     jetbrains.idea-community
+    nodejs_23
 
     # Art
     aseprite

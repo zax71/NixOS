@@ -6,6 +6,7 @@
     ./direnv.nix
     ./ohmyposh.nix
     ./kitty.nix
+    ./zoxide.nix
   ];
   home = {
     username = "zax";

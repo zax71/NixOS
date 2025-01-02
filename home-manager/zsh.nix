@@ -20,6 +20,8 @@
         update = "sudo nixos-rebuild switch --flake ${flakeDir}";
         update-home-manager = "home-manager switch --flake ${flakeDir}";
         htop = "btop";
+        cd = "z";
+        cdi = "zi";
       };
 
     history = {

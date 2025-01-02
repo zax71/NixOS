@@ -44,7 +44,7 @@
     allowedUDPPortRanges = [
       {
         from = 4646;
-        to = 4647;
+        to = 4649;
       }
     ];
   };
