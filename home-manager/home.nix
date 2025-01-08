@@ -13,5 +13,4 @@
     homeDirectory = "/home/zax";
     stateVersion = "24.05";
   };
-
 }

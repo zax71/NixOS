@@ -20,6 +20,7 @@
     alsa-utils
     lazygit
     tldr
+    yt-dlp
 
     # Nvim deps
     ripgrep

@@ -84,8 +84,10 @@
           luadbi-mysql # Database abstraction layer
         ];
       };
-    };
 
+    };
+    udisks2.enable = true;
+    gvfs.enable = true;
     displayManager = {
       sddm.enable = true;
       defaultSession = "none+awesome";
@@ -145,7 +147,8 @@
       "wheel"
       "audio"
       "docker"
-    ]; # Enable ‘sudo’ for the user.
+      "dialout"
+    ];
   };
 
   environment.variables = {
