@@ -1,6 +1,22 @@
-{ pkgs, ... }:
+{
+  inputs,
+  pkgs,
+  config,
+  ...
+}:
+
 {
   nixpkgs.config.allowUnfree = true;
+
+  nixpkgs.overlays = [
+    (final: _: {
+      # this allows you to access `pkgs.unstable` anywhere in your config
+      unstable = import inputs.nixpkgs-unstable {
+        inherit (final.stdenv.hostPlatform) system;
+        inherit (final) config;
+      };
+    })
+  ];
 
   environment.systemPackages = with pkgs; [
     home-manager
@@ -13,7 +29,7 @@
     unzip
     zip
     fzf
-    fastfetch
+    unstable.fastfetch
     cmus
     sshfs
     btop
@@ -21,6 +37,9 @@
     lazygit
     tldr
     yt-dlp
+    ffmpeg
+    uv
+    vulkan-tools
 
     # Nvim deps
     ripgrep
@@ -39,7 +58,9 @@
     bottles
     audacity
     blender
+    kicad
     nomacs # Image viewer
+    unstable.bruno
     (discord.override {
       withVencord = true;
     })
@@ -59,7 +80,7 @@
     # Dev tools
     nodePackages.pnpm
     python313
-    cargo
+    unstable.cargo
     rustc
     go
     git
@@ -69,10 +90,11 @@
     gnumake
     godot_4
     jetbrains.idea-community
+    thonny
     nodejs_23
 
     # Art
-    aseprite
+    unstable.aseprite
     gimp
 
     # Xorg deps
@@ -80,8 +102,8 @@
     fontconfig
 
     # Games
-    superTuxKart
-    flightgear
-    prismlauncher
+    unstable.superTuxKart
+    unstable.flightgear
+    unstable.prismlauncher
   ];
 }

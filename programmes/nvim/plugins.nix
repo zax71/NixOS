@@ -53,5 +53,5 @@ with pkgs.vimPlugins;
   ]))
 
   vim-wakatime
-  catppuccin-nvim
+  everforest # Colour scheme
 ]
