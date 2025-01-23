@@ -19,10 +19,13 @@
   ];
 
   # Enable flakes
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
+  nix.settings = {
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+    auto-optimise-store = true;
+  };
 
   # Use GRUB
   boot.loader = {
@@ -66,6 +69,13 @@
       scrollMethod = "button";
       scrollButton = 2;
     };
+  };
+
+  # Automatic cleanup
+  nix.gc = {
+    automatic = true;
+    dates = "daily";
+    options = "--delete-older-than 30d";
   };
 
   services = {
