@@ -40,6 +40,7 @@
     ffmpeg
     uv
     vulkan-tools
+    neo-cowsay
 
     # Nvim deps
     ripgrep
