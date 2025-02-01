@@ -7,6 +7,7 @@
     ./ohmyposh.nix
     ./kitty.nix
     ./zoxide.nix
+    ./rofi.nix
   ];
   home = {
     username = "zax";
