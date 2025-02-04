@@ -93,6 +93,7 @@
     jetbrains.idea-community
     thonny
     nodejs_23
+    redisinsight
 
     # Art
     unstable.aseprite

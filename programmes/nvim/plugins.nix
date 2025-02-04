@@ -11,6 +11,7 @@ with pkgs.vimPlugins;
   nvim-lint
   conform-nvim
   nvim-colorizer-lua
+  nvim-autopairs
 
   # Nvim-cmp
   nvim-cmp
