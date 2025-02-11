@@ -1,7 +1,6 @@
 {
   inputs,
   pkgs,
-  config,
   ...
 }:
 
@@ -32,7 +31,7 @@
     unstable.fastfetch
     cmus
     sshfs
-    btop
+    btop-rocm
     alsa-utils
     lazygit
     tldr
@@ -41,6 +40,7 @@
     uv
     vulkan-tools
     neo-cowsay
+    yazi
 
     # Nvim deps
     ripgrep
@@ -65,6 +65,7 @@
     (discord.override {
       withVencord = true;
     })
+    drawio
 
     # KDE stuff
     dolphin
