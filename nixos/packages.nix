@@ -41,6 +41,7 @@
     vulkan-tools
     neo-cowsay
     yazi
+    exiftool
 
     # Nvim deps
     ripgrep
@@ -61,6 +62,9 @@
     blender
     kicad
     nomacs # Image viewer
+    darktable
+    insomnia
+    obs-studio
     unstable.bruno
     (discord.override {
       withVencord = true;
@@ -74,6 +78,7 @@
     kdePackages.kio-fuse
     kdePackages.kio-extras
     kdePackages.qtstyleplugin-kvantum
+    kdePackages.skanpage
 
     # GNOME stuff
     nautilus
