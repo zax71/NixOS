@@ -47,7 +47,7 @@
     ripgrep
 
     # Desktop applications
-    firefox
+    ungoogled-chromium
     vlc
     kitty
     flameshot
