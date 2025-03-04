@@ -1,13 +1,13 @@
 {
   imports = [
-    ./zsh.nix
-    ./theme.nix
-    ./picom.nix
-    ./direnv.nix
-    ./ohmyposh.nix
-    ./kitty.nix
-    ./zoxide.nix
-    ./rofi.nix
+    ./programs/zsh.nix
+    ./programs/theme.nix
+    ./programs/picom.nix
+    ./programs/direnv.nix
+    ./programs/ohmyposh.nix
+    ./programs/kitty.nix
+    ./programs/zoxide.nix
+    ./programs/rofi.nix
   ];
   home = {
     username = "zax";
