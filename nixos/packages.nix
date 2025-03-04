@@ -43,7 +43,7 @@
     ripgrep
 
     # Desktop applications
-    ungoogled-chromium
+    #ungoogled-chromium # If chromium is installed then it will forcefully be the default browser...
     firefox
     vlc
     kitty
