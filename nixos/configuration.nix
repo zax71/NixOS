@@ -22,6 +22,7 @@
     ./modules/networking.nix
     ./modules/nix-options.nix
     ./modules/printing.nix
+    ./modules/sound.nix
 
     ./packages.nix
   ];
@@ -45,12 +46,6 @@
       scrollButton = 2;
     };
   };
-
-  # Sound
-  # hardware.pulseaudio.enable = true;
-  boot.extraModprobeConfig = ''
-    options snd_hda_intel enable=0,1
-  '';
 
   # Screen tearing fix I hope
   hardware.graphics = {
@@ -87,7 +82,6 @@
   };
 
   environment.variables = {
-
     QT_QPA_PLATFORMTHEME = "qt5ct";
     GTK_THEME = "Adwaita:dark";
     GSETTINGS_SCHEMA_DIR = "${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}/glib-2.0/schemas";
