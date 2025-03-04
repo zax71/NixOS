@@ -48,6 +48,8 @@
 
     # Desktop applications
     ungoogled-chromium
+    vivaldi
+    firefox
     vlc
     kitty
     flameshot
@@ -100,6 +102,7 @@
     thonny
     nodejs_23
     redisinsight
+    nixfmt
 
     # Art
     unstable.aseprite

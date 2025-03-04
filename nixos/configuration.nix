@@ -14,8 +14,9 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./packages.nix
-    ./disk-config.nix
-    ./java.nix
+    ./modules/disko/desktop.nix
+    ./modules/java.nix
+    ./modules/networking.nix
   ];
 
   # Enable flakes
@@ -40,17 +41,7 @@
   };
 
   # Networking
-  networking.hostName = "z-pc";
-  networking.networkmanager.enable = true;
-  networking.firewall = {
-    enable = true;
-    allowedUDPPortRanges = [
-      {
-        from = 4646;
-        to = 4649;
-      }
-    ];
-  };
+  
 
   # i18n
   time.timeZone = "Europe/London";
