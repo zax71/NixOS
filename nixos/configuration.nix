@@ -12,22 +12,19 @@
 {
   imports = [
     # Include the results of the hardware scan.
-    ./hardware-configuration.nix
-    ./packages.nix
+    ./hardware/desktop.nix
+
     ./modules/disko/desktop.nix
+    ./modules/awesomewm.nix
+    ./modules/fonts.nix
     ./modules/java.nix
+    ./modules/locale.nix
     ./modules/networking.nix
+    ./modules/nix-options.nix
+    ./modules/printing.nix
+
+    ./packages.nix
   ];
-
-  # Enable flakes
-  nix.settings = {
-    experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
-    auto-optimise-store = true;
-  };
-
   # Use GRUB
   boot.loader = {
     efi = {
@@ -40,19 +37,6 @@
     };
   };
 
-  # Networking
-  
-
-  # i18n
-  time.timeZone = "Europe/London";
-  i18n.defaultLocale = "en_GB.UTF-8";
-
-  console = {
-    # font = "Lat2-Terminus16";
-    keyMap = "uk";
-    # useXkbConfig = true; # use xkb.options in tty.
-  };
-
   # Middle click scroll
   services.libinput = {
     enable = true;
@@ -61,55 +45,6 @@
       scrollButton = 2;
     };
   };
-
-  # Automatic cleanup
-  nix.gc = {
-    automatic = true;
-    dates = "daily";
-    options = "--delete-older-than 30d";
-  };
-
-  services = {
-    # Enable the X11 windowing system and AwesomeWM
-    xserver = {
-      enable = true;
-      deviceSection = ''Option "TearFree" "true"'';
-      videoDrivers = [ "modesetting" ];
-      xkb = {
-        layout = "gb";
-      };
-      windowManager.awesome = {
-        enable = true;
-        luaModules = with pkgs.luaPackages; [
-          luarocks # is the package manager for Lua modules
-          luadbi-mysql # Database abstraction layer
-        ];
-      };
-
-    };
-    udisks2.enable = true;
-    gvfs.enable = true;
-    displayManager = {
-      sddm.enable = true;
-      defaultSession = "none+awesome";
-    };
-
-    # Printing
-    printing.enable = true; # CUPS
-    avahi = {
-      enable = true;
-      nssmdns4 = true;
-      openFirewall = true;
-    };
-
-    # openssh.enable = true;
-  };
-
-  # fileSystems."/mnt/truenas" = {
-  #   device = "//192.168.0.106/share";
-  #   fsType = "cifs";
-  #   options = [ "username=zax" "password=<password>" "x-systemd.automount" "noauto" ];
-  # };
 
   # Sound
   # hardware.pulseaudio.enable = true;
@@ -152,50 +87,12 @@
   };
 
   environment.variables = {
-    AWESOME_THEMES_PATH = "/home/zax/.config/awesome/themes";
+
     QT_QPA_PLATFORMTHEME = "qt5ct";
     GTK_THEME = "Adwaita:dark";
     GSETTINGS_SCHEMA_DIR = "${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}/glib-2.0/schemas";
     EDITOR = "nix run /home/zax/nixos/programmes/nvim --"; # This is really dumb, yazi doesn't load the zsh config and hence aliases don't work
   };
-  # Fonts
-  fonts = {
-    packages = with pkgs; [
-      monocraft
-      inter
-      noto-fonts
-      (nerdfonts.override {
-        fonts = [
-          "JetBrainsMono"
-        ];
-      })
-    ];
-
-    fontconfig.defaultFonts = {
-      serif = [ "Noto Serif" ];
-      sansSerif = [ "Inter" ];
-      monospace = [ "JetBrainsMono NF Regular" ];
-    };
-  };
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
-  # Copy the NixOS configuration file and link it from the resulting system
-  # (/run/current-system/configuration.nix). This is useful in case you
-  # accidentally delete configuration.nix.
-  # system.copySystemConfiguration = true;
 
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.

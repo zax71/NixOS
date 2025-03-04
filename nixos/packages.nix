@@ -1,8 +1,4 @@
-{
-  inputs,
-  pkgs,
-  ...
-}:
+{ inputs, pkgs, ... }:
 
 {
   nixpkgs.config.allowUnfree = true;
@@ -48,7 +44,6 @@
 
     # Desktop applications
     ungoogled-chromium
-    vivaldi
     firefox
     vlc
     kitty
@@ -68,9 +63,7 @@
     insomnia
     obs-studio
     unstable.bruno
-    (discord.override {
-      withVencord = true;
-    })
+    (discord.override { withVencord = true; })
     drawio
 
     # KDE stuff
@@ -102,7 +95,7 @@
     thonny
     nodejs_23
     redisinsight
-    nixfmt
+    nixfmt-rfc-style
 
     # Art
     unstable.aseprite

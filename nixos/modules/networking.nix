@@ -1,7 +1,8 @@
-networking.hostName = "z-pc";
+{ lib, ... }:
+{
+  networking.hostName = "z-pc";
   networking.networkmanager.enable = true;
   networking.firewall = {
-    enable = true;
     allowedUDPPortRanges = [
       {
         from = 4646;
@@ -9,3 +10,4 @@ networking.hostName = "z-pc";
       }
     ];
   };
+}
