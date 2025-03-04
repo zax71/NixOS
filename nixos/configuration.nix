@@ -16,13 +16,16 @@
 
     ./modules/disko/desktop.nix
     ./modules/awesomewm.nix
+    ./modules/docker.nix
     ./modules/fonts.nix
     ./modules/java.nix
     ./modules/locale.nix
     ./modules/networking.nix
     ./modules/nix-options.nix
     ./modules/printing.nix
+    ./modules/programs.nix
     ./modules/sound.nix
+    ./modules/user.nix
 
     ./packages.nix
   ];
@@ -38,47 +41,9 @@
     };
   };
 
-  # Middle click scroll
-  services.libinput = {
-    enable = true;
-    mouse = {
-      scrollMethod = "button";
-      scrollButton = 2;
-    };
-  };
-
   # Screen tearing fix I hope
   hardware.graphics = {
     enable = true;
-  };
-
-  programs = {
-    java = {
-      enable = true;
-      additionalRuntimes = {
-        jdk23 = (pkgs.jdk23.override { enableJavaFX = true; });
-        jdk21 = (pkgs.jdk21.override { enableJavaFX = true; });
-        jdk17 = pkgs.jdk17;
-        jdk8 = pkgs.jdk8;
-      };
-      package = pkgs.jdk21;
-    };
-    zsh.enable = true;
-    dconf.enable = true;
-    steam.enable = true;
-  };
-  virtualisation.docker.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.zax = {
-    shell = pkgs.zsh;
-    isNormalUser = true;
-    extraGroups = [
-      "wheel"
-      "audio"
-      "docker"
-      "dialout"
-    ];
   };
 
   environment.variables = {
