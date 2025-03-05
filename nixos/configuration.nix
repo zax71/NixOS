@@ -20,6 +20,7 @@
     ./modules/fonts.nix
     ./modules/java.nix
     ./modules/locale.nix
+    ./modules/middle-click-scroll.nix
     ./modules/networking.nix
     ./modules/nix-options.nix
     ./modules/printing.nix
