@@ -52,6 +52,7 @@
     zotero
     via
     obsidian
+    inkscape
     rsibreak
     vscode
     bottles
@@ -96,6 +97,9 @@
     nodejs_23
     redisinsight
     nixfmt-rfc-style
+
+    plantuml
+    graphviz # For PlantUML diagrams
 
     # Art
     unstable.aseprite
