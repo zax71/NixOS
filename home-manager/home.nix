@@ -4,7 +4,7 @@
     ./programs/theme.nix
     ./programs/picom.nix
     ./programs/direnv.nix
-    ./programs/ohmyposh.nix
+    ./programs/ohmyposh
     ./programs/kitty.nix
     ./programs/zoxide.nix
     ./programs/rofi.nix
