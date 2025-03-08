@@ -8,6 +8,7 @@
     ./programs/kitty.nix
     ./programs/zoxide.nix
     ./programs/rofi.nix
+    ./programs/neovim
   ];
   home = {
     username = "zax";
