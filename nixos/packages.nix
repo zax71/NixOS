@@ -43,19 +43,18 @@
     ripgrep
 
     # Desktop applications
-    #ungoogled-chromium # If chromium is installed then it will forcefully be the default browser...
     firefox
+    thunderbird
     vlc
     kitty
     flameshot
     libreoffice
     zotero
-    via
     obsidian
     inkscape
     rsibreak
     vscode
-    bottles
+    bottles # Run Windows apps
     audacity
     blender
     kicad
@@ -82,7 +81,7 @@
 
     # Dev tools
     nodePackages.pnpm
-    python313
+    python314
     unstable.cargo
     rustc
     go
