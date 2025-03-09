@@ -51,7 +51,6 @@
     QT_QPA_PLATFORMTHEME = "qt5ct";
     GTK_THEME = "Adwaita:dark";
     GSETTINGS_SCHEMA_DIR = "${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}/glib-2.0/schemas";
-    EDITOR = "nix run /home/zax/nixos/programmes/nvim --"; # This is really dumb, yazi doesn't load the zsh config and hence aliases don't work
   };
 
   # This option defines the first version of NixOS you have installed on this particular machine,

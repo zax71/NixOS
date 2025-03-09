@@ -26,6 +26,7 @@ let
       p.nix
       p.python
       p.rust
+      p.svelte
       p.toml
       p.typescript
       p.vue
@@ -45,6 +46,7 @@ in
     fd
     ripgrep
     xclip
+    nodejs_latest
 
     # -- LSP --
     typos-lsp # Spell check
@@ -55,6 +57,9 @@ in
     gopls # Go
     slint-lsp # Slint
     nixd # Nix
+    emmet-ls # HTML esque
+    svelte-language-server # Svelte
+    tailwindcss-language-server # TailwindCSS
 
     # -- Formatters --
     stylua # Lua
@@ -87,6 +92,7 @@ in
     #package = pkgs.neovim;
     vimAlias = false;
     withNodeJs = true;
+    defaultEditor = true;
 
     plugins = [
       treesitterWithGrammars

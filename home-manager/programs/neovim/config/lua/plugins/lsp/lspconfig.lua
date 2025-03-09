@@ -62,7 +62,8 @@ return {
 		})
 
 		-- used to enable autocompletion (assign to every lsp server config)
-		local capabilities = cmp_nvim_lsp.default_capabilities()
+		local capabilities = vim.lsp.protocol.make_client_capabilities()
+		capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 		-- Change the Diagnostic symbols in the sign column (gutter)
 		local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
@@ -113,5 +114,34 @@ return {
 		lspconfig.gopls.setup({})
 		lspconfig.slint_lsp.setup({})
 		lspconfig.nixd.setup({})
+		lspconfig.svelte.setup({})
+		lspconfig.tailwindcss.setup({
+			capabilities = capabilities,
+		})
+		lspconfig.emmet_ls.setup({
+			capabilities = capabilities,
+			filetypes = {
+				"css",
+				"eruby",
+				"html",
+				"javascript",
+				"javascriptreact",
+				"less",
+				"sass",
+				"scss",
+				"svelte",
+				"pug",
+				"typescriptreact",
+				"vue",
+			},
+			init_options = {
+				html = {
+					options = {
+						-- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+						["bem.enabled"] = true,
+					},
+				},
+			},
+		})
 	end,
 }
