@@ -59,7 +59,6 @@ in
     nixd # Nix
     emmet-ls # HTML esque
     svelte-language-server # Svelte
-    tailwindcss-language-server # TailwindCSS
 
     # -- Formatters --
     stylua # Lua

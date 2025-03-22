@@ -60,7 +60,7 @@
     kicad
     nomacs # Image viewer
     darktable
-    insomnia
+    unstable.yaak
     obs-studio
     unstable.bruno
     (discord.override { withVencord = true; })
@@ -96,6 +96,8 @@
     nodejs_23
     redisinsight
     nixfmt-rfc-style
+
+    unstable.tailwindcss-language-server # This is an LSP, it isn't installed in the nvim config because the stable version doesn't work
 
     plantuml
     graphviz # For PlantUML diagrams
