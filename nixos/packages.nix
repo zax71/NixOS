@@ -60,6 +60,7 @@
     kicad
     nomacs # Image viewer
     darktable
+    rawtherapee
     unstable.yaak
     obs-studio
     unstable.bruno
