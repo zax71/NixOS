@@ -18,6 +18,7 @@
     ./modules/awesomewm.nix
     ./modules/docker.nix
     ./modules/fonts.nix
+    ./modules/graphics.nix
     ./modules/java.nix
     ./modules/locale.nix
     ./modules/middle-click-scroll.nix
@@ -40,11 +41,6 @@
       efiSupport = true;
       device = "/dev/sda";
     };
-  };
-
-  # Screen tearing fix I hope
-  hardware.graphics = {
-    enable = true;
   };
 
   environment.variables = {

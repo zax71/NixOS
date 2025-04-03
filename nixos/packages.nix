@@ -66,6 +66,7 @@
     unstable.bruno
     (discord.override { withVencord = true; })
     drawio
+    davinci-resolve
 
     # KDE stuff
     dolphin
