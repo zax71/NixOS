@@ -67,6 +67,8 @@
     (discord.override { withVencord = true; })
     drawio
     davinci-resolve
+    rpi-imager
+    gparted
 
     # KDE stuff
     dolphin
