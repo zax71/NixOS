@@ -38,6 +38,7 @@
     neo-cowsay
     yazi
     exiftool
+    caligula
 
     # Nvim deps
     ripgrep
@@ -69,6 +70,7 @@
     davinci-resolve
     rpi-imager
     gparted
+    freecad
 
     # KDE stuff
     dolphin
