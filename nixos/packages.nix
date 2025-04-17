@@ -71,6 +71,8 @@
     rpi-imager
     gparted
     freecad
+    krita
+    wireshark
 
     # KDE stuff
     dolphin
