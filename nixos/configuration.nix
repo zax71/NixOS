@@ -3,8 +3,6 @@
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
 {
-  config,
-  lib,
   pkgs,
   ...
 }:
@@ -16,6 +14,7 @@
 
     ./modules/disko/desktop.nix
     ./modules/awesomewm.nix
+    ./modules/bluetooth.nix
     ./modules/docker.nix
     ./modules/fonts.nix
     ./modules/graphics.nix

@@ -71,7 +71,6 @@
     rpi-imager
     gparted
     wireshark
-    blueman
 
     # KDE stuff
     dolphin
@@ -120,6 +119,6 @@
     # Games
     unstable.superTuxKart
     unstable.flightgear
-    unstable.prismlauncher
+    prismlauncher
   ];
 }
