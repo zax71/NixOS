@@ -70,9 +70,8 @@
     davinci-resolve
     rpi-imager
     gparted
-    freecad
-    krita
     wireshark
+    blueman
 
     # KDE stuff
     dolphin
@@ -112,7 +111,7 @@
 
     # Art
     unstable.aseprite
-    gimp
+    unstable.gimp3
 
     # Xorg deps
     libxkbcommon
