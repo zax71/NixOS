@@ -39,6 +39,7 @@
     yazi
     exiftool
     caligula
+    playerctl # MPRIS control, needed to get WH1000XM4 headset media controls to work
 
     # Nvim deps
     ripgrep
