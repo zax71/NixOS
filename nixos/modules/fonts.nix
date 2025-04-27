@@ -5,6 +5,7 @@
       monocraft
       inter
       noto-fonts
+      open-sans
       (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     ];
 
