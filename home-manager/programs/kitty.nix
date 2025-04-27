@@ -25,7 +25,7 @@
       background            #202020
       foreground            #d0d0d0
       cursor                #d0d0d0
-      selection_background  #303030
+      selection_background  #d0d0d0
       color0                #151515
       color8                #505050
       color1                #ac4142
