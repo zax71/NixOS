@@ -74,6 +74,7 @@
     gparted
     wireshark
     qgis # Mapping
+    pika-backup
 
     # KDE stuff
     dolphin
