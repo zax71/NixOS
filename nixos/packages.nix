@@ -84,6 +84,7 @@
     kdePackages.kio-extras
     kdePackages.qtstyleplugin-kvantum
     kdePackages.skanpage
+    kdePackages.okular
 
     # GNOME stuff
     nautilus
