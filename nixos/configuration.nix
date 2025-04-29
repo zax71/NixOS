@@ -25,6 +25,8 @@
     ./modules/nix-options.nix
     ./modules/printing.nix
     ./modules/programs.nix
+    ./modules/secrets
+    ./modules/shares
     ./modules/sound.nix
     ./modules/user.nix
 

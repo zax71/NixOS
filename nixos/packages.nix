@@ -25,7 +25,7 @@
     zip
     fzf
     unstable.fastfetch
-    cmus
+    cmus # Terminal music player
     sshfs
     btop-rocm
     alsa-utils
@@ -33,17 +33,18 @@
     tldr
     yt-dlp
     ffmpeg
-    uv
+    uv # A Python package manager. I should probably only use this in a dev flake...
     vulkan-tools
     neo-cowsay
     yazi
     exiftool
     caligula
     playerctl # MPRIS control, needed to get WH1000XM4 headset media controls to work
-    nixpkgs-review
+    sops # Secrets management for nix config
 
     # Nvim deps
-    ripgrep
+    unstable.tailwindcss-language-server # This is an LSP, it isn't installed in the nvim config because the stable version doesn't work
+    ripgrep # TODO: Move this in to home-manager
 
     # Desktop applications
     firefox
@@ -54,27 +55,31 @@
     libreoffice
     zotero
     obsidian
-    inkscape
     rsibreak
     vscode
     bottles # Run Windows apps
     audacity
     blender
     kicad
-    nomacs # Image viewer
-    darktable
-    rawtherapee
     unstable.yaak
     obs-studio
     unstable.bruno
     (discord.override { withVencord = true; })
-    drawio
     davinci-resolve
     rpi-imager
     gparted
     wireshark
     qgis # Mapping
     pika-backup
+
+    # Art
+    unstable.aseprite
+    drawio
+    unstable.gimp3
+    nomacs # Image viewer
+    darktable
+    rawtherapee
+    inkscape
 
     # KDE stuff
     dolphin
@@ -107,15 +112,8 @@
     nodejs_23
     redisinsight
     nixfmt-rfc-style
-
-    unstable.tailwindcss-language-server # This is an LSP, it isn't installed in the nvim config because the stable version doesn't work
-
     plantuml
     graphviz # For PlantUML diagrams
-
-    # Art
-    unstable.aseprite
-    unstable.gimp3
 
     # Xorg deps
     libxkbcommon
