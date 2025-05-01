@@ -36,7 +36,7 @@
     uv # A Python package manager. I should probably only use this in a dev flake...
     vulkan-tools
     neo-cowsay
-    yazi
+    unstable.yazi
     exiftool
     caligula
     playerctl # MPRIS control, needed to get WH1000XM4 headset media controls to work
