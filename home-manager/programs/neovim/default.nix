@@ -88,7 +88,7 @@ in
   programs.neovim = {
     enable = true;
     # Neovim-unwrapped is used by default. And the wrapped version has features added to it that we are using
-    #package = pkgs.neovim;
+    package = pkgs.neovim-unwrapped;
     vimAlias = false;
     withNodeJs = true;
     defaultEditor = true;
