@@ -10,6 +10,7 @@
     ./programs/rofi.nix
     ./programs/neovim
     ./programs/mpris-proxy.nix
+    ./programs/yazi.nix
   ];
   home = {
     username = "zax";

@@ -36,11 +36,11 @@
     uv # A Python package manager. I should probably only use this in a dev flake...
     vulkan-tools
     neo-cowsay
-    unstable.yazi
     exiftool
     caligula
     playerctl # MPRIS control, needed to get WH1000XM4 headset media controls to work
     sops # Secrets management for nix config
+    xdragon # Yazi drag and drop
 
     # Nvim deps
     unstable.tailwindcss-language-server # This is an LSP, it isn't installed in the nvim config because the stable version doesn't work
