@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   imports = [
     ./programs/zsh.nix
@@ -11,10 +12,18 @@
     ./programs/neovim
     ./programs/mpris-proxy.nix
     ./programs/yazi.nix
+    ./programs/discord.nix
   ];
   home = {
     username = "zax";
     homeDirectory = "/home/zax";
     stateVersion = "24.05";
   };
+
+  # I'd love a neater solution to this
+  nixpkgs.config.allowUnfreePredicate =
+    pkg:
+    builtins.elem (pkgs.lib.getName pkg) [
+      "discord"
+    ];
 }

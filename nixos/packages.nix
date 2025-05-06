@@ -64,7 +64,6 @@
     unstable.yaak
     obs-studio
     unstable.bruno
-    (discord.override { withVencord = true; })
     davinci-resolve
     rpi-imager
     gparted
