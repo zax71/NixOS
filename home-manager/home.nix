@@ -12,6 +12,7 @@
     ./programs/neovim
     ./programs/mpris-proxy.nix
     ./programs/yazi.nix
+    ./programs/awesome
     ./programs/discord.nix
   ];
   home = {
