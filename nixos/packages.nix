@@ -41,6 +41,7 @@
     playerctl # MPRIS control, needed to get WH1000XM4 headset media controls to work
     sops # Secrets management for nix config
     xdragon # Yazi drag and drop
+    luarocks
 
     # Nvim deps
     unstable.tailwindcss-language-server # This is an LSP, it isn't installed in the nvim config because the stable version doesn't work
