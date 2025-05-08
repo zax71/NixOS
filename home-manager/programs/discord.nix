@@ -15,7 +15,10 @@
         dontRoundMyTimestamps.enable = true;
         friendsSince.enable = true;
         fullSearchContext.enable = true;
-        memberCount.enable = true;
+        memberCount = {
+          enable = true;
+          memberList = false;
+        };
         noOnboardingDelay.enable = true;
         noPendingCount.enable = true;
         noReplyMention.enable = true;
