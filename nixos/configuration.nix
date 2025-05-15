@@ -19,6 +19,7 @@
     ./modules/fonts.nix
     ./modules/graphics.nix
     ./modules/java.nix
+    ./modules/LaTeX.nix
     ./modules/locale.nix
     ./modules/middle-click-scroll.nix
     ./modules/networking.nix

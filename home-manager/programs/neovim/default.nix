@@ -47,6 +47,7 @@ in
     ripgrep
     xclip
     nodejs_latest
+    wakatime-cli
 
     # -- LSP --
     typos-lsp # Spell check

@@ -114,6 +114,7 @@
     nixfmt-rfc-style
     plantuml
     graphviz # For PlantUML diagrams
+    ninja
 
     # Xorg deps
     libxkbcommon
