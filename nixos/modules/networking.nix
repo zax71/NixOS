@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ ... }:
 {
   networking.hostName = "z-pc";
   networking.networkmanager.enable = true;
@@ -9,5 +9,6 @@
         to = 4649;
       }
     ];
+    allowedTCPPorts = [ 5173 ];
   };
 }
