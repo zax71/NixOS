@@ -49,6 +49,8 @@
 
     # Desktop applications
     firefox
+    epiphany # Ugh, webkit
+    # chromium # Web dev is great...STOP BEING MY DEFAULT BROWSER FFS
     thunderbird
     vlc
     kitty
