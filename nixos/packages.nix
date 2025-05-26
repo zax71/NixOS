@@ -84,7 +84,6 @@
     inkscape
 
     # KDE stuff
-    dolphin
     kdePackages.breeze
     kdePackages.qtsvg
     kdePackages.kio-fuse
@@ -111,7 +110,7 @@
     godot_4
     jetbrains.idea-community
     thonny
-    nodejs_23
+    nodejs_24
     redisinsight
     nixfmt-rfc-style
     plantuml

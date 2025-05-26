@@ -4,7 +4,7 @@
   programs.nixcord = {
     enable = true;
     #vesktop.enable = false;
-    #discord.openASAR.enable = false;
+    discord.openASAR.enable = false;
     config = {
       themeLinks = [
         "https://raw.githubusercontent.com/zax71/discord-themes/refs/heads/main/theme.css"
