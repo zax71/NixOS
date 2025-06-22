@@ -42,6 +42,8 @@
     sops # Secrets management for nix config
     xdragon # Yazi drag and drop
     luarocks
+    wineWowPackages.stable # Wine
+    appimage-run # Use this to run Appimages, they don't work by default
 
     # Nvim deps
     unstable.tailwindcss-language-server # This is an LSP, it isn't installed in the nvim config because the stable version doesn't work
@@ -73,6 +75,7 @@
     wireshark
     qgis # Mapping
     pika-backup
+    qlcplus # lighting software
 
     # Art
     unstable.aseprite
@@ -82,6 +85,7 @@
     darktable
     rawtherapee
     inkscape
+    krita
 
     # KDE stuff
     kdePackages.breeze
@@ -125,5 +129,6 @@
     unstable.superTuxKart
     unstable.flightgear
     prismlauncher
+    dolphin-emu
   ];
 }

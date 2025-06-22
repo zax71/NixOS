@@ -21,7 +21,7 @@
     ./modules/java.nix
     ./modules/LaTeX.nix
     ./modules/locale.nix
-    ./modules/middle-click-scroll.nix
+    #./modules/middle-click-scroll.nix
     ./modules/networking.nix
     ./modules/nix-options.nix
     ./modules/printing.nix
@@ -30,6 +30,8 @@
     ./modules/shares
     ./modules/sound.nix
     ./modules/user.nix
+    ./modules/virtualisation.nix
+    ./modules/xdg-portal.nix
 
     ./packages.nix
   ];
