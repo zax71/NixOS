@@ -18,6 +18,15 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
+-- A function that will put something on screen <x> if that screen exists, otherwise use screen 1
+local function multi_screen_support(screen_number)
+	if screen_number > screen.count() then
+		return 1
+	else
+		return screen_number
+	end
+end
+
 -- {{{ Rules
 -- Rules to apply to new clients (through the "manage" signal).
 awful.rules.rules = {
@@ -75,7 +84,7 @@ awful.rules.rules = {
 	{ rule_any = { type = { "normal", "dialog" } }, properties = { titlebars_enabled = false } },
 
 	-- Set Discord to always map on the tag named "2" on screen 2.
-	{ rule = { class = "discord" }, properties = { screen = 2, tag = "2" } },
+	{ rule = { class = "discord" }, properties = { screen = multi_screen_support(2), tag = "2" } },
 
 	-- Set Firefox to always map on the tag named "1" on screen 2.
 	{ rule = { class = "firefox" }, properties = { screen = 2, tag = "1", maximized = false } },
@@ -94,11 +103,10 @@ awful.rules.rules = {
 	{ rule = { class = "resolve", name = "Project Manager" }, properties = { placement = awful.placement.centered } },
 
 	-- ETCNomad auto setup
-	{ rule = { name = "Eos : 1" }, properties = { maximized = false, screen = 2, tag = "3" } },
+	{ rule = { name = "Eos : 1" }, properties = { maximized = false, screen = multi_screen_support(2), tag = "3" } },
 	{ rule = { name = "Eos : 2" }, properties = { maximized = false, screen = 1, tag = "3" } },
 
 	-- Yazi drag and drop window needs centering
-
 	{ rule = { class = "Dragon", name = "dragon" }, properties = { placement = awful.placement.centered } },
 }
 -- }}}
