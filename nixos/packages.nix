@@ -76,6 +76,7 @@
     qgis # Mapping
     pika-backup
     qlcplus # lighting software
+    annotator
 
     # Art
     unstable.aseprite
