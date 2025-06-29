@@ -6,11 +6,11 @@
     enableZshIntegration = true;
 
     keymap = {
-      manager.prepend_keymap = [
+      mgr.prepend_keymap = [
         {
           on = [ "<C-n>" ];
           run = ''
-            shell 'dragon -x -i -T "$1"' --confirm
+            shell 'dragon-drop -x -i -T "$1"' --confirm
           '';
           desc = ''Drag and Drop item'';
         }
