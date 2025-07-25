@@ -1,4 +1,4 @@
-{ config, ... }:
+{ ... }:
 {
   programs.kitty = {
     enable = true;
@@ -16,7 +16,7 @@
       map ctrl+v paste_from_clipboard
 
       # Set fonts
-      font_family JetBrainsMono NF Regular
+      font_family JetBrains Mono
 
       # Transparency
       background_opacity 0.9

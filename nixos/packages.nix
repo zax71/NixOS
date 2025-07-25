@@ -44,6 +44,7 @@
     luarocks
     wineWowPackages.stable # Wine
     appimage-run # Use this to run Appimages, they don't work by default
+    gradle
 
     # Nvim deps
     unstable.tailwindcss-language-server # This is an LSP, it isn't installed in the nvim config because the stable version doesn't work
@@ -61,7 +62,7 @@
     zotero
     obsidian
     rsibreak
-    vscode
+    vscode.fhs
     bottles # Run Windows apps
     audacity
     blender

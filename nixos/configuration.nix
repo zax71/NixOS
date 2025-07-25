@@ -24,6 +24,7 @@
     #./modules/middle-click-scroll.nix
     ./modules/networking.nix
     ./modules/nix-options.nix
+    ./modules/opentabletdriver.nix
     ./modules/printing.nix
     ./modules/programs.nix
     ./modules/secrets
