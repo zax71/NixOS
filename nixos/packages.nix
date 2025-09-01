@@ -45,6 +45,7 @@
     wineWowPackages.stable # Wine
     appimage-run # Use this to run Appimages, they don't work by default
     gradle
+    bc # A calculator, required for the imagemagick multicrop script
 
     # Nvim deps
     unstable.tailwindcss-language-server # This is an LSP, it isn't installed in the nvim config because the stable version doesn't work
@@ -59,6 +60,7 @@
     kitty
     flameshot
     libreoffice
+    hunspell # Libreoffice spell checker
     zotero
     obsidian
     rsibreak
@@ -78,6 +80,9 @@
     pika-backup
     qlcplus # lighting software
     annotator
+    signal-desktop # e2ee chat
+    gscan2pdf # Scanning
+    naps2 # Scanning
 
     # Art
     unstable.aseprite
@@ -95,7 +100,7 @@
     kdePackages.kio-fuse
     kdePackages.kio-extras
     kdePackages.qtstyleplugin-kvantum
-    kdePackages.skanpage
+    kdePackages.skanpage # Scanning
     kdePackages.okular
 
     # GNOME stuff
