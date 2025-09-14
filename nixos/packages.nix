@@ -76,13 +76,13 @@
     rpi-imager
     gparted
     wireshark
-    qgis # Mapping
     pika-backup
     qlcplus # lighting software
     annotator
     signal-desktop # e2ee chat
     gscan2pdf # Scanning
     naps2 # Scanning
+    halloy # IRC
 
     # Art
     unstable.aseprite
@@ -102,6 +102,7 @@
     kdePackages.qtstyleplugin-kvantum
     kdePackages.skanpage # Scanning
     kdePackages.okular
+    kdePackages.marble # mapping
 
     # GNOME stuff
     nautilus
@@ -120,6 +121,7 @@
     gnumake
     godot_4
     jetbrains.idea-community
+    android-studio
     thonny
     nodejs_24
     redisinsight
