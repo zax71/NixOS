@@ -16,6 +16,7 @@
     ./modules/awesomewm.nix
     ./modules/bluetooth.nix
     ./modules/docker.nix
+    ./modules/flatpak.nix
     ./modules/fonts.nix
     ./modules/graphics.nix
     ./modules/java.nix

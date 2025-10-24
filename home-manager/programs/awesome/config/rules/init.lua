@@ -98,6 +98,9 @@ awful.rules.rules = {
 	-- Libreoffice windows are always maximized for some reason
 	{ rule = { class = "libreoffice" }, properties = { maximized = false } },
 
+	-- Linux Show Player windows are always maximized for some reason
+	{ rule = { class = "linux-show-player" }, properties = { maximized = false } },
+
 	-- Davinci Resolve needs a lot of rules...
 	-- TODO: Make the second monitor window work
 	{ rule = { class = "resolve", name = "Project Manager" }, properties = { placement = awful.placement.centered } },

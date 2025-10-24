@@ -16,6 +16,7 @@
       url = "github:kaylorben/nixcord";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.6.0";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
@@ -30,6 +31,7 @@
       nixpkgs,
       nixpkgs-unstable,
       home-manager,
+      nix-flatpak,
       ...
     }@inputs:
     let
@@ -43,6 +45,7 @@
         };
         modules = [
           ./nixos/configuration.nix
+          nix-flatpak.nixosModules.nix-flatpak
           inputs.disko.nixosModules.disko
         ];
       };
