@@ -11,6 +11,18 @@
         inherit (final) config;
       };
     })
+    (final: prev: {
+      # Fix for gscan2pdf in Nixkpgs#355168
+      imagemagick = prev.imagemagick.overrideAttrs (old: {
+        version = "7.1.2-3";
+        src = prev.fetchFromGitHub {
+          owner = "ImageMagick";
+          repo = "ImageMagick";
+          tag = "7.1.2-3";
+          hash = "sha256-L4apUdF1VJXSVqWAyjYFG/4qDJoJ0ObmSOpd90kqXsU=";
+        };
+      });
+    })
   ];
 
   environment.systemPackages = with pkgs; [
@@ -46,6 +58,7 @@
     appimage-run # Use this to run Appimages, they don't work by default
     gradle
     bc # A calculator, required for the imagemagick multicrop script
+    difftastic # A tool to create better diffs
 
     # Nvim deps
     unstable.tailwindcss-language-server # This is an LSP, it isn't installed in the nvim config because the stable version doesn't work
@@ -85,7 +98,7 @@
     halloy # IRC
 
     # Art
-    unstable.aseprite
+    aseprite
     drawio
     unstable.gimp3
     nomacs # Image viewer
@@ -135,7 +148,7 @@
     fontconfig
 
     # Games
-    unstable.superTuxKart
+    superTuxKart
     unstable.flightgear
     prismlauncher
     dolphin-emu
