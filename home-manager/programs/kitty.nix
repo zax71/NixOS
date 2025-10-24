@@ -12,6 +12,7 @@
 
       # CTRL+C copy or interrupt
       map ctrl+c copy_and_clear_or_interrupt
+      map ctrl+alt+c copy_ansi_to_clipboard
       # CTRL+V paste
       map ctrl+v paste_from_clipboard
 
