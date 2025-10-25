@@ -2,5 +2,5 @@ require("options.opt")
 require("options.remap")
 require("options.treesitter-parsers-loader")
 require("options.lazy")
-
+require("options.lsp")
 require("everforest").load()

@@ -96,6 +96,8 @@
     gscan2pdf # Scanning
     naps2 # Scanning
     halloy # IRC
+    unstable.kmidimon # MIDI packet sniffer
+    qmidinet # Network midi send/reicieve
 
     # Art
     aseprite
@@ -151,6 +153,6 @@
     superTuxKart
     unstable.flightgear
     prismlauncher
-    dolphin-emu
+    #dolphin-emu
   ];
 }
