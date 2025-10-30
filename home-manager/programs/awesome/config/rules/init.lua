@@ -98,6 +98,9 @@ awful.rules.rules = {
 	-- Libreoffice windows are always maximized for some reason
 	{ rule = { class = "libreoffice" }, properties = { maximized = false } },
 
+	-- Blender windows are always maximized for some reason
+	{ rule = { class = "Blender" }, properties = { maximized = false } },
+
 	-- Linux Show Player windows are always maximized for some reason
 	{ rule = { class = "linux-show-player" }, properties = { maximized = false } },
 
