@@ -27,9 +27,8 @@ in
           };
         ```
         This snippet:
-        1. Generates environment variables `JAVA_HOME<version>`
-        2. Generates aliases `java<version>`
-        3. Creates symlinked directories at `/nix/java-jdk<version>`
+        1. Generates environment variables `JAVA_HOME11` and `JAVA_HOME14`
+        2. Generates aliases `java11` and `java14`
       '';
       default = { };
       type = with types; attrsOf package;
@@ -44,7 +43,7 @@ in
       javaAliases = mapAttrs' (
         name: value: nameValuePair "java-${name}" "${value.home}/bin/java"
       ) javaPkgs;
-      javaTmpfiles = mapAttrsFlatten (name: value: "L+ /nix/java${name} - - - - ${value.home}") javaPkgs;
+      javaTmpfiles = mapAttrsToList (name: value: "L+ /nix/java${name} - - - - ${value.home}") javaPkgs;
       javaEnvVariables = mapAttrs' (
         name: value: nameValuePair "JAVA_HOME_${toUpper (escapeDashes name)}" "${value.home}"
       ) javaPkgs;

@@ -56,7 +56,6 @@
     luarocks
     wineWowPackages.stable # Wine
     appimage-run # Use this to run Appimages, they don't work by default
-    gradle
     bc # A calculator, required for the imagemagick multicrop script
     difftastic # A tool to create better diffs
 
@@ -86,7 +85,7 @@
     obs-studio
     unstable.bruno
     davinci-resolve
-    rpi-imager
+    #rpi-imager # See Nixpkgs #454826
     gparted
     wireshark
     pika-backup
@@ -144,6 +143,7 @@
     plantuml
     graphviz # For PlantUML diagrams
     ninja
+    #gradle
 
     # Xorg deps
     libxkbcommon
