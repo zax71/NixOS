@@ -1,7 +1,10 @@
-{ ... }:
+{ pkgs, ... }:
 {
   services = {
-    printing.enable = true; # CUPS
+    printing = {
+      enable = true; # CUPS
+      drivers = [ pkgs.hplip ];
+    };
     avahi = {
       enable = true;
       nssmdns4 = true;

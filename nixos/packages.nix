@@ -143,6 +143,7 @@
     plantuml
     graphviz # For PlantUML diagrams
     ninja
+    tex-fmt # format LaTeX files, used in VSCode
     #gradle
 
     # Xorg deps
