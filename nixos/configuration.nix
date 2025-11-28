@@ -55,6 +55,9 @@
     GSETTINGS_SCHEMA_DIR = "${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}/glib-2.0/schemas";
   };
 
+  # Use latest kernal
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
   #

@@ -11,18 +11,6 @@
         inherit (final) config;
       };
     })
-    (final: prev: {
-      # Fix for gscan2pdf in Nixkpgs#355168
-      imagemagick = prev.imagemagick.overrideAttrs (old: {
-        version = "7.1.2-3";
-        src = prev.fetchFromGitHub {
-          owner = "ImageMagick";
-          repo = "ImageMagick";
-          tag = "7.1.2-3";
-          hash = "sha256-L4apUdF1VJXSVqWAyjYFG/4qDJoJ0ObmSOpd90kqXsU=";
-        };
-      });
-    })
   ];
 
   environment.systemPackages = with pkgs; [
@@ -79,13 +67,13 @@
     vscode.fhs
     bottles # Run Windows apps
     audacity
-    blender
+    blender-hip
     kicad
     unstable.yaak
     obs-studio
     unstable.bruno
     davinci-resolve
-    #rpi-imager # See Nixpkgs #454826
+    unstable.rpi-imager
     gparted
     wireshark
     pika-backup
@@ -97,6 +85,8 @@
     halloy # IRC
     unstable.kmidimon # MIDI packet sniffer
     qmidinet # Network midi send/reicieve
+    lmms
+    popsicle
 
     # Art
     aseprite
@@ -145,6 +135,7 @@
     ninja
     tex-fmt # format LaTeX files, used in VSCode
     #gradle
+    #esptool
 
     # Xorg deps
     libxkbcommon
