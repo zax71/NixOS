@@ -46,6 +46,7 @@
     appimage-run # Use this to run Appimages, they don't work by default
     bc # A calculator, required for the imagemagick multicrop script
     difftastic # A tool to create better diffs
+    presenterm # CLI presentation tool
 
     # Nvim deps
     unstable.tailwindcss-language-server # This is an LSP, it isn't installed in the nvim config because the stable version doesn't work
@@ -107,6 +108,7 @@
     kdePackages.skanpage # Scanning
     kdePackages.okular
     kdePackages.marble # mapping
+    kdePackages.kdenlive
 
     # GNOME stuff
     nautilus
