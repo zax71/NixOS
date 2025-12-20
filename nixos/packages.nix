@@ -40,7 +40,7 @@
     caligula
     playerctl # MPRIS control, needed to get WH1000XM4 headset media controls to work
     sops # Secrets management for nix config
-    xdragon # Yazi drag and drop
+    dragon-drop # Yazi drag and drop
     luarocks
     wineWowPackages.stable # Wine
     appimage-run # Use this to run Appimages, they don't work by default
