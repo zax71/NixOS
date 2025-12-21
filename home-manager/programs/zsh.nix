@@ -21,6 +21,7 @@
         htop = "btop";
         cd = "z";
         cdi = "zi";
+        code = "codium";
       };
 
     history = {

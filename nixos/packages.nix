@@ -65,7 +65,8 @@
     zotero
     obsidian
     rsibreak
-    vscode.fhs
+    # vscode.fhs
+    vscodium.fhs # Goodbye Microsoft
     bottles # Run Windows apps
     audacity
     blender-hip
