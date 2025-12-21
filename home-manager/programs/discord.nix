@@ -10,8 +10,8 @@
         "https://raw.githubusercontent.com/zax71/discord-themes/refs/heads/main/theme.css"
       ];
       plugins = {
-        blurNSFW.enable = true;
-        clearURLs.enable = true;
+        blurNsfw.enable = true;
+        clearUrLs.enable = true;
         crashHandler.enable = true;
         dontRoundMyTimestamps.enable = true;
         friendsSince.enable = true;
