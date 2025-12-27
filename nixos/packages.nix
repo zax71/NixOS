@@ -89,6 +89,7 @@
     qmidinet # Network midi send/reicieve
     lmms
     popsicle
+    parabolic
 
     # Art
     aseprite
