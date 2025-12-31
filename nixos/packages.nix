@@ -66,7 +66,7 @@
     obsidian
     rsibreak
     # vscode.fhs
-    vscodium.fhs # Goodbye Microsoft
+    unstable.vscodium.fhs # Goodbye Microsoft
     bottles # Run Windows apps
     audacity
     blender-hip
@@ -90,6 +90,7 @@
     lmms
     popsicle
     parabolic
+    lorien # Infinate zoom whiteboarding
 
     # Art
     aseprite

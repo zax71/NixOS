@@ -19,6 +19,7 @@
     ./modules/flatpak.nix
     ./modules/fonts.nix
     ./modules/graphics.nix
+    ./modules/hyprland.nix
     ./modules/java.nix
     ./modules/LaTeX.nix
     ./modules/locale.nix

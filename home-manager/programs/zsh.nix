@@ -24,6 +24,12 @@
         code = "codium";
       };
 
+    initContent = ''
+      alias -s md='bat'
+      alias -s mp4='xdg-open'
+      alias -s mp3='xdg-open';
+    '';
+
     history = {
       size = 10000;
       path = "${config.xdg.dataHome}/zsh/history";
