@@ -91,6 +91,7 @@
     popsicle
     parabolic
     lorien # Infinate zoom whiteboarding
+    anki # Flashcards
 
     # Art
     aseprite
@@ -129,7 +130,7 @@
     gcc
     gnumake
     godot_4
-    jetbrains.idea-community
+    jetbrains.idea
     android-studio
     thonny
     nodejs_24
