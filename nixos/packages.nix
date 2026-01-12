@@ -113,6 +113,7 @@
     kdePackages.okular
     kdePackages.marble # mapping
     kdePackages.kdenlive
+    kdePackages.ark # Archive manager
 
     # GNOME stuff
     nautilus

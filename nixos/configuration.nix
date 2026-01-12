@@ -23,6 +23,7 @@
     ./modules/java.nix
     ./modules/LaTeX.nix
     ./modules/locale.nix
+    ./modules/mime-types.nix
     #./modules/middle-click-scroll.nix
     ./modules/networking.nix
     ./modules/nix-options.nix
