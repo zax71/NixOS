@@ -73,7 +73,7 @@
     kicad
     unstable.yaak
     obs-studio
-    #unstable.bruno
+    unstable.bruno
     davinci-resolve
     unstable.rpi-imager
     gparted
