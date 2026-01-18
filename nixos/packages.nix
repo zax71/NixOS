@@ -90,7 +90,6 @@
     lmms
     popsicle
     parabolic
-    lorien # Infinate zoom whiteboarding
     anki # Flashcards
 
     # Art

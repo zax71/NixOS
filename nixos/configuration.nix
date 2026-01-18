@@ -19,12 +19,12 @@
     ./modules/flatpak.nix
     ./modules/fonts.nix
     ./modules/graphics.nix
-    ./modules/hyprland.nix
+    # ./modules/hyprland.nix
     ./modules/java.nix
     ./modules/LaTeX.nix
     ./modules/locale.nix
     ./modules/mime-types.nix
-    #./modules/middle-click-scroll.nix
+    # ./modules/middle-click-scroll.nix
     ./modules/networking.nix
     ./modules/nix-options.nix
     ./modules/opentabletdriver.nix
