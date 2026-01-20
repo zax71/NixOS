@@ -151,6 +151,6 @@
     superTuxKart
     unstable.flightgear
     prismlauncher
-    #dolphin-emu
+    dolphin-emu
   ];
 }
