@@ -81,7 +81,7 @@
     pika-backup
     qlcplus # lighting software
     annotator
-    signal-desktop # e2ee chat
+    unstable.signal-desktop # e2ee chat
     gscan2pdf # Scanning
     naps2 # Scanning
     halloy # IRC
