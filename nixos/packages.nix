@@ -47,6 +47,7 @@
     bc # A calculator, required for the imagemagick multicrop script
     difftastic # A tool to create better diffs
     presenterm # CLI presentation tool
+    typst
 
     # Nvim deps
     unstable.tailwindcss-language-server # This is an LSP, it isn't installed in the nvim config because the stable version doesn't work
