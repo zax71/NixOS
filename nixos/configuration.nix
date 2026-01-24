@@ -34,6 +34,7 @@
     ./modules/shares
     ./modules/sound.nix
     ./modules/user.nix
+    ./modules/udev.nix
     ./modules/virtualisation.nix
     ./modules/xdg-portal.nix
 

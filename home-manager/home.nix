@@ -15,6 +15,7 @@
     ./programs/awesome
     ./programs/discord.nix
     ./programs/hyprland
+    ./programs/helix.nix
   ];
   home = {
     username = "zax";

@@ -92,6 +92,7 @@
     popsicle
     parabolic
     anki # Flashcards
+    via # Keyboard configuiration
 
     # Art
     aseprite
