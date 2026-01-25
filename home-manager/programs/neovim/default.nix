@@ -92,7 +92,7 @@ in
     package = pkgs.neovim-unwrapped;
     vimAlias = false;
     withNodeJs = true;
-    defaultEditor = true;
+    defaultEditor = false;
 
     plugins = [
       treesitterWithGrammars

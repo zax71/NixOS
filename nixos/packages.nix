@@ -48,6 +48,7 @@
     difftastic # A tool to create better diffs
     presenterm # CLI presentation tool
     typst
+    tinymist
 
     # Nvim deps
     unstable.tailwindcss-language-server # This is an LSP, it isn't installed in the nvim config because the stable version doesn't work
