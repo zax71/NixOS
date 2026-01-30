@@ -16,6 +16,8 @@
         dontRoundMyTimestamps.enable = true;
         friendsSince.enable = true;
         fullSearchContext.enable = true;
+        validReply.enable = true;
+        validUser.enable = true;
         memberCount = {
           enable = true;
           memberList = false;
