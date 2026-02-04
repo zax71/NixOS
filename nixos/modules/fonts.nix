@@ -7,6 +7,7 @@
       noto-fonts
       open-sans
       nerd-fonts.jetbrains-mono
+      font-awesome
     ];
 
     fontconfig.defaultFonts = {
