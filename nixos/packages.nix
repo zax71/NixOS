@@ -16,6 +16,8 @@
   environment.systemPackages = with pkgs; [
     home-manager
 
+    (pkgs.callPackage ./sacnview.nix { })
+
     # CLI apps
     vim
     wget
