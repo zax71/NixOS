@@ -20,6 +20,7 @@
       "text/html" = "firefox.desktop";
       "text/markdown" = "neovim.desktop";
       "text/plain" = "codium.desktop";
+      "text/x-typst" = "codium.desktop";
       "video/*" = "umpv.desktop";
       "x-scheme-handler/chrome" = "firefox.desktop";
       "x-scheme-handler/http" = "firefox.desktop";
