@@ -21,6 +21,7 @@
     ./modules/graphics.nix
     # ./modules/hyprland.nix
     ./modules/java.nix
+    ./modules/keyring.nix
     ./modules/LaTeX.nix
     ./modules/locale.nix
     ./modules/mime-types.nix
