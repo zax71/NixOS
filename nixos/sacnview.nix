@@ -19,13 +19,13 @@ let
 in
 stdenv.mkDerivation rec {
   pname = "sacnview";
-  version = "v3.0.0-beta.2";
+  version = "v3.0.0";
 
   src = fetchFromGitHub {
     owner = "docsteer";
     repo = "sacnview";
     rev = version;
-    hash = "sha256-ZHHfKtc30MA6d746bBTIAbdSudEEzSzNNNPe/eLDBjU=";
+    hash = "sha256-gMs9olQ2N5ydc/ATBI+UVCDlExQve4xXTbHymqs2Pb0=";
     fetchSubmodules = true;
     deepClone = true;
   };

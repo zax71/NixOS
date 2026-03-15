@@ -16,7 +16,7 @@
   environment.systemPackages = with pkgs; [
     home-manager
 
-    (pkgs.callPackage ./sacnview.nix { })
+    #(pkgs.callPackage ./sacnview.nix { })
 
     # CLI apps
     vim
@@ -96,6 +96,10 @@
     parabolic
     anki # Flashcards
     via # Keyboard configuiration
+    element-desktop
+    seahorse # manage Gnome keyring
+    libsecret
+    easyeffects
 
     # Art
     aseprite
@@ -139,7 +143,6 @@
     android-studio
     thonny
     nodejs_24
-    redisinsight
     nixfmt-rfc-style
     plantuml
     graphviz # For PlantUML diagrams
