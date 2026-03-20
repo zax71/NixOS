@@ -50,7 +50,8 @@
     difftastic # A tool to create better diffs
     presenterm # CLI presentation tool
     typst
-    tinymist
+    tinymist # Typst LSP
+    asciiquarium-transparent
 
     # Nvim deps
     unstable.tailwindcss-language-server # This is an LSP, it isn't installed in the nvim config because the stable version doesn't work
@@ -87,12 +88,9 @@
     annotator
     unstable.signal-desktop # e2ee chat
     gscan2pdf # Scanning
-    naps2 # Scanning
     halloy # IRC
     unstable.kmidimon # MIDI packet sniffer
-    qmidinet # Network midi send/reicieve
     lmms
-    popsicle
     parabolic
     anki # Flashcards
     via # Keyboard configuiration
