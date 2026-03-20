@@ -129,7 +129,11 @@ local globalkeys = gears.table.join(
 
 	awful.key({ modkey }, ".", function()
 		awful.spawn.with_shell("rofi -show emoji")
-	end, { description = "show emoji picker", group = "launcher" })
+	end, { description = "show emoji picker", group = "launcher" }),
+
+	awful.key({ modkey }, "c", function()
+		awful.spawn.with_shell("rofi -show calc")
+	end, { description = "show calculator", group = "launcher" })
 )
 
 -- Bind all key numbers to tags.

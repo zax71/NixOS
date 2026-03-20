@@ -3,7 +3,10 @@
   programs.rofi = {
     enable = true;
     terminal = "kitty";
-    plugins = [ pkgs.rofi-emoji ];
+    plugins = [
+      pkgs.rofi-emoji
+      pkgs.rofi-calc
+    ];
     # https://github.com/johnae/world/blob/9da6b3282d2505390ee800ca18a991a87fb705a0/users/profiles/rofi.nix
     theme =
       let
@@ -124,7 +127,7 @@
         };
       };
     extraConfig = {
-      modi = "run,ssh,drun";
+      modi = "run,ssh,drun,calc";
       display-ssh = "";
       display-run = "";
       display-drun = "";
