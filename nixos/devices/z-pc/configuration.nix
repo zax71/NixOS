@@ -9,37 +9,37 @@
 
 {
   imports = [
-    # Include the results of the hardware scan.
-    ./hardware/desktop.nix
+    # Hardware specific options
+    ./hardware.nix
+    ./disks.nix
 
-    ./modules/disko/desktop.nix
-    ./modules/awesomewm.nix
-    ./modules/bluetooth.nix
-    ./modules/docker.nix
-    ./modules/flatpak.nix
-    ./modules/fonts.nix
-    ./modules/graphics.nix
-    # ./modules/hyprland.nix
-    ./modules/java.nix
-    ./modules/keyring.nix
-    ./modules/LaTeX.nix
-    ./modules/locale.nix
-    ./modules/mime-types.nix
-    # ./modules/middle-click-scroll.nix
-    ./modules/networking.nix
-    ./modules/nix-options.nix
-    ./modules/opentabletdriver.nix
-    ./modules/printing.nix
-    ./modules/programs.nix
-    ./modules/secrets
-    ./modules/shares
-    ./modules/sound.nix
-    ./modules/user.nix
-    ./modules/udev.nix
-    ./modules/virtualisation.nix
-    ./modules/xdg-portal.nix
+    # Other modules in alphabetical order
+    ./../../modules/awesomewm.nix
+    ./../../modules/bluetooth.nix
+    ./../../modules/docker.nix
+    ./../../modules/flatpak.nix
+    ./../../modules/fonts.nix
+    ./../../modules/graphics.nix
+    ./../../modules/java.nix
+    ./../../modules/keyring.nix
+    ./../../modules/LaTeX.nix
+    ./../../modules/locale.nix
+    ./../../modules/mime-types.nix
+    ./../../modules/networking.nix
+    ./../../modules/nix-options.nix
+    ./../../modules/opentabletdriver.nix
+    ./../../modules/printing.nix
+    ./../../modules/programs.nix
+    ./../../modules/secrets
+    ./../../modules/shares
+    ./../../modules/sound.nix
+    ./../../modules/user.nix
+    ./../../modules/udev.nix
+    ./../../modules/virtualisation.nix
+    ./../../modules/xdg-portal.nix
 
-    ./packages.nix
+    # Assorted packages
+    ./../../packages.nix
   ];
   # Use GRUB
   boot.loader = {

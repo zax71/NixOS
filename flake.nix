@@ -49,7 +49,7 @@
           inherit inputs;
         };
         modules = [
-          ./nixos/configuration.nix
+          ./nixos/devices/z-pc/configuration.nix
           nix-flatpak.nixosModules.nix-flatpak
           inputs.disko.nixosModules.disko
         ];
