@@ -19,6 +19,7 @@
     ./../../modules/udev.nix
     ./../../modules/xdg-portal.nix
     ./../../modules/awesomewm.nix
+    ./../../packages.nix
 
   ];
 
