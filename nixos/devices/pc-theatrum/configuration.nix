@@ -40,6 +40,9 @@
     GSETTINGS_SCHEMA_DIR = "${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}/glib-2.0/schemas";
   };
 
+  # Allow unfree programmes
+  nixpkgs.config.allowUnfree = true;
+
   # Use latest kernal
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
