@@ -15,11 +15,12 @@
     ./../../modules/programs/zsh.nix
     ./../../modules/programs/dconf.nix
     ./../../modules/sound.nix
+    ./../../modules/unstable.nix
     ./../../modules/user.nix
     ./../../modules/udev.nix
     ./../../modules/xdg-portal.nix
     ./../../modules/awesomewm.nix
-    ./../../packages.nix
+    ./packages.nix
 
   ];
 
