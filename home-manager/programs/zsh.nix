@@ -16,7 +16,7 @@
         ll = "eza -l -a --icons=always";
         tree = "ls --tree --git-ignore";
         cat = "bat";
-        update = "sudo nixos-rebuild switch --flake ${flakeDir}";
+        update = "sudo nixos-rebuild switch --flake ${flakeDir}#$HOST";
         update-home-manager = "home-manager switch --flake ${flakeDir}";
         htop = "btop";
         cd = "z";

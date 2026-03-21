@@ -55,6 +55,17 @@
         ];
       };
 
+      nixosConfigurations.pc-theatrum = nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = {
+          inherit inputs;
+        };
+        modules = [
+          ./nixos/devices/pc-theatrum/configuration.nix
+          inputs.disko.nixosModules.disko
+        ];
+      };
+
       homeConfigurations.zax = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
         extraSpecialArgs = {
