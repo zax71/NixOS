@@ -29,7 +29,7 @@
     ./../../modules/nix-options.nix
     ./../../modules/opentabletdriver.nix
     ./../../modules/printing.nix
-    ./../../modules/programs.nix
+    ./../../modules/programs
     ./../../modules/secrets
     ./../../modules/shares
     ./../../modules/sound.nix

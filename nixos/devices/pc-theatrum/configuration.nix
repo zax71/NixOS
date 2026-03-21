@@ -12,6 +12,8 @@
     ./../../modules/mime-types.nix
     ./../../modules/networking.nix
     ./../../modules/nix-options.nix
+    ./../../modules/programs/zsh.nix
+    ./../../modules/programs/dconf.nix
     ./../../modules/sound.nix
     ./../../modules/user.nix
     ./../../modules/udev.nix
