@@ -23,6 +23,7 @@
     ./packages.nix
 
   ];
+  networking.hostName = "pc-theatrum";
 
   # Use GRUB
   boot.loader = {

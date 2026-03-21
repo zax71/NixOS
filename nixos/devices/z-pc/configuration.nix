@@ -42,6 +42,7 @@
     # Assorted packages
     ./packages.nix
   ];
+  networking.hostName = "z-pc";
   # Use GRUB
   boot.loader = {
     efi = {

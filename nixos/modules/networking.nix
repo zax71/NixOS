@@ -1,6 +1,5 @@
 { ... }:
 {
-  networking.hostName = "z-pc";
   networking.networkmanager.enable = true;
   networking.firewall = {
 
