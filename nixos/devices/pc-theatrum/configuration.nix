@@ -5,6 +5,7 @@
 {
   imports = [
     ./disks.nix
+    ./hardware-configuration.nix
     ./../../modules/fonts.nix
     ./../../modules/graphics.nix
     ./../../modules/locale.nix
