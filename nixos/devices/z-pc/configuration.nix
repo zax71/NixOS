@@ -19,7 +19,7 @@
     ./../../modules/docker.nix
     ./../../modules/flatpak.nix
     ./../../modules/fonts.nix
-    ./../../modules/graphics.nix
+    ./graphics.nix
     ./../../modules/java.nix
     ./../../modules/keyring.nix
     ./../../modules/LaTeX.nix

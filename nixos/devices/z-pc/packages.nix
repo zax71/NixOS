@@ -86,6 +86,7 @@
     seahorse # manage Gnome keyring
     libsecret
     easyeffects
+    pavucontrol
 
     # Art
     aseprite

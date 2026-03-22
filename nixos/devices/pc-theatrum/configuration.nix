@@ -7,7 +7,6 @@
     ./disks.nix
     ./hardware-configuration.nix
     ./../../modules/fonts.nix
-    ./../../modules/graphics.nix
     ./../../modules/locale.nix
     ./../../modules/mime-types.nix
     ./../../modules/networking.nix
@@ -20,6 +19,7 @@
     ./../../modules/udev.nix
     ./../../modules/xdg-portal.nix
     ./../../modules/awesomewm.nix
+    ./../../modules/ssh-server.nix
     ./packages.nix
 
   ];
@@ -36,6 +36,8 @@
       device = "/dev/sda";
     };
   };
+
+  hardware.graphics.enable = true;
 
   environment.variables = {
     QT_QPA_PLATFORMTHEME = "qt5ct";
