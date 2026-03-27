@@ -82,8 +82,8 @@
 
     # Games
     superTuxKart
-    unstable.flightgear
-    prismlauncher
+    #unstable.flightgear
+    #prismlauncher
     dolphin-emu
   ];
 }
