@@ -15,4 +15,5 @@
     rocmPackages.rocm-device-libs
     rocmPackages.hipcc
   ];
+  services.xserver.videoDrivers = [ "amdgpu" ];
 }

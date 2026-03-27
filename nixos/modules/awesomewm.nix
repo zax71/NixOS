@@ -5,7 +5,7 @@
     xserver = {
       enable = true;
       deviceSection = ''Option "TearFree" "true"'';
-      videoDrivers = [ "amdgpu" ];
+      #videoDrivers = [ "amdgpu" ];
       xkb = {
         layout = "gb";
       };
