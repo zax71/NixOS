@@ -27,53 +27,10 @@
       url = "github:jneem/probe-rs-rules";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    import-tree.url = "github:vic/import-tree";
+
+    wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
   };
-
-  outputs =
-    {
-      self,
-      nixpkgs,
-      nixpkgs-unstable,
-      home-manager,
-      nix-flatpak,
-      ...
-    }@inputs:
-    let
-      system = "x86_64-linux";
-    in
-    {
-      nixosConfigurations.z-pc = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = {
-          inherit inputs;
-        };
-        modules = [
-          ./nixos/devices/z-pc/configuration.nix
-          nix-flatpak.nixosModules.nix-flatpak
-          inputs.disko.nixosModules.disko
-        ];
-      };
-
-      nixosConfigurations.pc-theatrum = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = {
-          inherit inputs;
-        };
-        modules = [
-          ./nixos/devices/pc-theatrum/configuration.nix
-          inputs.disko.nixosModules.disko
-        ];
-      };
-
-      homeConfigurations.zax = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.${system};
-        extraSpecialArgs = {
-          inherit inputs;
-        };
-        modules = [
-          ./home-manager/home.nix
-          inputs.nixcord.homeModules.nixcord
-        ];
-      };
-    };
+  outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
 }
