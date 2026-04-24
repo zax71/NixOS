@@ -128,6 +128,7 @@
     godot_4
     jetbrains.idea
     android-studio
+    android-tools
     thonny
     nodejs_24
     nixfmt-rfc-style
