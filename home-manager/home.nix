@@ -14,7 +14,6 @@
     ./programs/yazi.nix
     ./programs/awesome
     ./programs/discord.nix
-    ./programs/hyprland
     ./programs/helix.nix
   ];
   home = {
