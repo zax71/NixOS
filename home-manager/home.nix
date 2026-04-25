@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
   imports = [
     ./programs/zsh.nix
@@ -15,6 +15,7 @@
     ./programs/awesome
     ./programs/discord.nix
     ./programs/helix.nix
+    # inputs.nixcord.homeModules.nixcord
   ];
   home = {
     username = "zax";
