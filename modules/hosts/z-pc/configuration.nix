@@ -9,7 +9,7 @@
         self.nixosModules.zPcHardware
         self.nixosModules.zPcGraphics
         self.nixosModules.zPcPackages
-        self.nixosModules.awesomewm
+        self.nixosModules.awesomewm # Done
         self.nixosModules.bluetooth
         self.nixosModules.docker
         self.nixosModules.flatpak
