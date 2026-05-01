@@ -118,7 +118,6 @@
 
     # Dev tools
     nodePackages.pnpm
-    python314
     unstable.cargo
     rustc
     go
