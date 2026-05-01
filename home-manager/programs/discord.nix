@@ -4,6 +4,7 @@
   programs.nixcord = {
     enable = true;
     #vesktop.enable = false;
+    discord.vencord.enable = true;
     discord.openASAR.enable = false;
     config = {
       themeLinks = [

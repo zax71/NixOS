@@ -83,6 +83,8 @@
     anki # Flashcards
     via # Keyboard configuiration
     element-desktop
+    fluffychat
+    cinny-desktop
     seahorse # manage Gnome keyring
     libsecret
     easyeffects
