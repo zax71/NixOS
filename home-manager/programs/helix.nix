@@ -3,12 +3,14 @@
   programs.helix = {
     enable = true;
     defaultEditor = true;
-    extraPackages = [
-      pkgs.nixd
-      pkgs.tinymist
-      pkgs.rust-analyzer
-      pkgs.nixfmt-rfc-style
-      pkgs.typstyle
+    extraPackages = with pkgs; [
+      nixd
+      tinymist
+      rust-analyzer
+      nixfmt-rfc-style
+      typstyle
+      ty
+      ruff
     ];
     settings = {
       theme = "everforest_dark";
@@ -42,17 +44,20 @@
 
     languages = {
       language-server = {
-        "nix" = {
+        "nixd" = {
           command = lib.getExe pkgs.nixd;
         };
-        "typst" = {
+        "tinymist" = {
           command = lib.getExe pkgs.tinymist;
         };
-        "rust" = {
+        "rust-analyzer" = {
           command = lib.getExe pkgs.rust-analyzer;
         };
-        "python" = {
-          command = lib.getExe pkgs.pyright;
+        "ty" = {
+          command = lib.getExe pkgs.ty;
+        };
+        "ruff" = {
+          command = lib.getExe pkgs.ty;
         };
       };
       language = [
@@ -60,21 +65,27 @@
           name = "nix";
           formatter.command = lib.getExe pkgs.nixfmt-rfc-style;
           auto-format = true;
+          language-servers = [ "nixd" ];
         }
         {
           name = "typst";
           formatter.command = lib.getExe pkgs.typstyle;
           auto-format = true;
+          language-servers = [ "tinymist" ];
         }
         {
           name = "rust";
           formatter.command = lib.getExe pkgs.rustfmt;
           auto-format = true;
+          language-servers = [ "rust-analyzer" ];
         }
         {
           name = "python";
-          formatter.command = lib.getExe pkgs.black;
           auto-format = true;
+          language-servers = [
+            "ty"
+            "ruff"
+          ];
         }
       ];
     };
