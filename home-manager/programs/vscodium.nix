@@ -66,11 +66,11 @@
           "Toggleable"
           "Yeet"
         ];
-        "workbench.editorAssociations" = {
+        workbench.editorAssociations = {
           "{hexdiff}:/**/*.*" = "hexEditor.hexedit";
           "*.pdf" = "latex-workshop-pdf-hook";
         };
-        "update.mode" = "none";
+        update.mode = "none";
         "[python]" = {
           "editor.formatOnType" = true;
           "editor.defaultFormatter" = "ms-python.python";
@@ -101,40 +101,40 @@
           "editor.wordWrap" = "on";
           "editor.defaultFormatter" = "James-Yu.latex-workshop";
         };
-        "latex-workshop.formatting.latex" = "tex-fmt";
-        "git.enableSmartCommit" = true;
-        "editor.linkedEditing" = true;
-        "editor.formatOnSave" = true;
-        "editor.formatOnPaste" = true;
-        "svelte.enable-ts-plugin" = true;
-        "update.showReleaseNotes" = false;
-        "workbench.colorTheme" = "Gruvbox Dark Hard";
-        "editor.unicodeHighlight.invisibleCharacters" = false;
-        "window.commandCenter" = false;
-        "workbench.layoutControl.enabled" = false;
-        "explorer.confirmPasteNative" = false;
-        "go.toolsManagement.autoUpdate" = true;
-        "git.openRepositoryInParentFolders" = "never";
-        "terminal.integrated.fontFamily" = "monospace";
-        "terminal.integrated.fontSize" = 13;
-        "go.useLanguageServer" = true;
-        "workbench.iconTheme" = "vscode-icons";
+        latex-workshop.formatting.latex = "tex-fmt";
+        git.enableSmartCommit = true;
+        editor.linkedEditing = true;
+        editor.formatOnSave = true;
+        editor.formatOnPaste = true;
+        svelte.enable-ts-plugin = true;
+        update.showReleaseNotes = false;
+        workbench.colorTheme = "Gruvbox Dark Hard";
+        editor.unicodeHighlight.invisibleCharacters = false;
+        window.commandCenter = false;
+        workbench.layoutControl.enabled = false;
+        explorer.confirmPasteNative = false;
+        go.toolsManagement.autoUpdate = true;
+        git.openRepositoryInParentFolders = "never";
+        terminal.integrated.fontFamily = "monospace";
+        terminal.integrated.fontSize = 13;
+        go.useLanguageServer = true;
+        workbench.iconTheme = "vscode-icons";
         "[lua]" = {
-          "editor.quickSuggestions" = {
+          editor.quickSuggestions = {
             comments = "inline";
             other = "on";
             strings = "on";
           };
-          "editor.semanticHighlighting.enabled" = true;
+          editor.semanticHighlighting.enabled = true;
         };
-        "chat.commandCenter.enabled" = false;
+        chat.commandCenter.enabled = false;
         "[jsonc]" = {
-          "editor.defaultFormatter" = "vscode.json-language-features";
+          editor.defaultFormatter = "vscode.json-language-features";
         };
-        "editor.fontFamily" = "JetBrains Mono";
-        "editor.fontLigatures" = true;
-        "latex-workshop.latex.outDir" = "%TMPDIR%";
-        "latex-workshop.latex.tools" = [
+        editor.fontFamily = "JetBrains Mono";
+        editor.fontLigatures = true;
+        latex-workshop.latex.outDir = "%TMPDIR%";
+        latex-workshop.latex.tools = [
           {
             name = "latexmk";
             command = "latexmk";
@@ -152,10 +152,10 @@
             };
           }
         ];
-        "ltex.language" = "en-GB";
-        "ltex.additionalRules.motherTongue" = "en-GB";
-        "cSpell.language" = "en-GB";
-        "terminal.integrated.initialHint" = false;
+        ltex.language = "en-GB";
+        ltex.additionalRules.motherTongue = "en-GB";
+        cSpell.language = "en-GB";
+        terminal.integrated.initialHint = false;
         "[json]" = {
           "editor.defaultFormatter" = "esbenp.prettier-vscode";
         };
