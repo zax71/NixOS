@@ -1,4 +1,5 @@
-# Forked from https://github.com/gytis-ivaskevicius/nixfiles/blob/master/config/dev.nix (MIT)
+{ self, inputs, ... }: {
+flake.nixosModules.java = # Forked from https://github.com/gytis-ivaskevicius/nixfiles/blob/master/config/dev.nix (MIT)
 # Then forked again from https://github.com/cody-quinn/dotfiles/blob/master/modules/system/runtimes/java.nix
 {
   config,
@@ -53,4 +54,6 @@ in
       environment.shellAliases = javaAliases;
       systemd.tmpfiles.rules = javaTmpfiles;
     };
+}
+;
 }

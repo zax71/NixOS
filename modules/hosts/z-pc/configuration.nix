@@ -20,7 +20,7 @@
         self.nixosModules.locale
         self.nixosModules.mime-types
         self.nixosModules.networking
-        self.nixosModules.nix-options
+        self.nixosModules.nixOptions
         self.nixosModules.openTabletDriver
         self.nixosModules.printing
         self.nixosModules.programs
@@ -31,7 +31,7 @@
         self.nixosModules.unstable
         self.nixosModules.udev
         self.nixosModules.virtualisaiton
-        self.nixosModules.xdg-portal
+        self.nixosModules.xdgPortal
 
         inputs.disko.nixosModules.disko
         self.diskoConfigurations.zPcDisko

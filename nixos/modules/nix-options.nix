@@ -1,4 +1,5 @@
-{ ... }:
+{ self, inputs, ... }: {
+flake.nixosModules.nix-options = { ... }:
 {
   nix = {
     # Automatic cleanup
@@ -17,4 +18,6 @@
       auto-optimise-store = true;
     };
   };
+}
+;
 }

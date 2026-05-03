@@ -1,4 +1,5 @@
-{ pkgs, ... }:
+{ self, inputs, ... }: {
+flake.nixosModules.awesomewm = { pkgs, ... }:
 {
   services = {
     # Enable the X11 windowing system and AwesomeWM
@@ -31,4 +32,6 @@
   environment.variables = {
     AWESOME_THEMES_PATH = "/home/zax/.config/awesome/themes";
   };
+}
+;
 }
