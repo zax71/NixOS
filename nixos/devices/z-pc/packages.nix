@@ -95,7 +95,7 @@
     drawio
     unstable.gimp3
     nomacs # Image viewer
-    darktable
+    unstable.darktable
     rawtherapee
     inkscape
     krita
