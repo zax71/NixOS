@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   programs.vscode = {
     enable = true;
@@ -31,9 +31,9 @@
         wakatime.vscode-wakatime
       ];
       userSettings = {
-        python.defaultInterpreterPath = "${pkgs.python315}/bin/python";
-        python.formatting.blackPath = "${pkgs.black}/bin/black";
-        terminal.integrated.defaultProfile.linux = "${pkgs.zsh}/bin/zsh";
+        python.defaultInterpreterPath = lib.getExe pkgs.python315;
+        python.formatting.blackPath = lib.getExe pkgs.black;
+        terminal.integrated.defaultProfile.linux = lib.getExe pkgs.zsh;
         workbench.startupEditor = "none";
         git.autofetch = true;
         git.confirmSync = false;
@@ -152,8 +152,12 @@
             };
           }
         ];
-        ltex.language = "en-GB";
-        ltex.additionalRules.motherTongue = "en-GB";
+        ltex = {
+          java.path = lib.getExe pkgs.jdk21;
+          ltex-ls-plus.path = pkgs.ltex-ls-plus;
+          language = "en-GB";
+          additionalRules.motherTongue = "en-GB";
+        };
         cSpell.language = "en-GB";
         terminal.integrated.initialHint = false;
         "[json]" = {
