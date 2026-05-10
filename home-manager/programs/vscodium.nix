@@ -153,8 +153,8 @@
           }
         ];
         ltex = {
-          java.path = lib.getExe pkgs.jdk21;
-          ltex-ls-plus.path = pkgs.ltex-ls-plus;
+          java.path = pkgs.jdk21;
+          ltex-ls-plus.path = lib.getExe pkgs.ltex-ls-plus;
           language = "en-GB";
           additionalRules.motherTongue = "en-GB";
         };
