@@ -49,6 +49,7 @@
     firefox
     epiphany # Ugh, webkit
     # chromium # Web dev is great...STOP BEING MY DEFAULT BROWSER FFS
+    dino
     thunderbird
     vlc
     kitty
