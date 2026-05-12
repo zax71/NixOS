@@ -57,7 +57,7 @@
           command = lib.getExe pkgs.ty;
         };
         "ruff" = {
-          command = lib.getExe pkgs.ty;
+          command = lib.getExe pkgs.ruff;
         };
       };
       language = [

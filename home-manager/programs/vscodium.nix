@@ -32,7 +32,9 @@
       ];
       userSettings = {
         python.defaultInterpreterPath = lib.getExe pkgs.python315;
-        python.formatting.blackPath = lib.getExe pkgs.black;
+        black-formatter.path = [
+          (lib.getExe pkgs.black)
+        ];
         terminal.integrated.defaultProfile.linux = lib.getExe pkgs.zsh;
         workbench.startupEditor = "none";
         git.autofetch = true;
@@ -73,7 +75,7 @@
         update.mode = "none";
         "[python]" = {
           "editor.formatOnType" = true;
-          "editor.defaultFormatter" = "ms-python.python";
+          "editor.defaultFormatter" = "ms-python.black-formatter";
         };
         "[svelte]" = {
           "editor.defaultFormatter" = "svelte.svelte-vscode";
