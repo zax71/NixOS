@@ -82,6 +82,7 @@
         {
           name = "python";
           auto-format = true;
+          formatter.command = lib.getExe pkgs.ruff;
           language-servers = [
             "ty"
             "ruff"
