@@ -16,6 +16,7 @@
       "audio/x-mpegurl" = "vlc.desktop";
       "image/png" = "nomacs.desktop";
       "image/jpeg" = "nomacs.desktop";
+      "image/webp" = "nomacs.desktop";
       "text/*" = "codium.desktop";
       "text/css" = "codium.desktop";
       "text/html" = "firefox.desktop";
