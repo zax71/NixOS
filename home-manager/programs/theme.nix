@@ -6,7 +6,7 @@
 {
   qt = {
     enable = true;
-    style.name = "Breeze-Dark";
+    style.name = "Breeze";
     style.package = pkgs.kdePackages.breeze;
   };
   gtk = {
