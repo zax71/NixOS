@@ -16,6 +16,7 @@
     ./programs/discord.nix
     ./programs/helix.nix
     ./programs/vscodium.nix
+    ./programs/zellij.nix
   ];
   home = {
     username = "zax";
