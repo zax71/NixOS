@@ -7,6 +7,7 @@
       cursor_shape underline
       cursor_blink_interval 0
       default_pointer_shape arrow
+
       # Putty paste
       mouse_map right press grabbed,ungrabbed paste_from_clipboard
 
@@ -47,6 +48,9 @@
 
       # Open new tabs in same directory
       map ctrl+shift+t new_tab_with_cwd 
+
+      # No close confirm
+      confirm_os_window_close 0
     '';
   };
 }
