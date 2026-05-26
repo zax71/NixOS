@@ -1,7 +1,7 @@
 { config, ... }:
 {
   fileSystems."/home/zax/Pictures" = {
-    device = "//z-nas.local/z-nas/Pictures";
+    device = "//192.168.0.110/z-nas/Pictures";
     fsType = "cifs";
 
     options = [

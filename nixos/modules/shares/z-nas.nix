@@ -1,7 +1,7 @@
 { config, ... }:
 {
   fileSystems."/mnt/z-nas" = {
-    device = "//z-nas.local/z-nas";
+    device = "//192.168.0.110/z-nas";
     fsType = "cifs";
 
     options = [
