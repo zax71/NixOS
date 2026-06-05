@@ -40,6 +40,7 @@
     typst
     tinymist # Typst LSP
     asciiquarium-transparent
+    devenv
 
     # Nvim deps
     unstable.tailwindcss-language-server # This is an LSP, it isn't installed in the nvim config because the stable version doesn't work
