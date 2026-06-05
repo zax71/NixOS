@@ -68,7 +68,7 @@ in
     gofumpt # Go
     taplo # TOML
     rustfmt # Rust
-    nixfmt-rfc-style # Nix
+    nixfmt # Nix
 
     # -- Linters --
     pylint # Python
@@ -80,10 +80,10 @@ in
 
     pyright
     emmet-ls
-    nodePackages.typescript
-    nodePackages.typescript-language-server
-    nodePackages.eslint_d
-    nodePackages.prettier
+    typescript
+    typescript-language-server
+    eslint_d
+    prettier
   ];
 
   programs.neovim = {

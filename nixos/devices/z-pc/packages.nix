@@ -32,7 +32,7 @@
     sops # Secrets management for nix config
     dragon-drop # Yazi drag and drop
     luarocks
-    wineWowPackages.stable # Wine
+    wineWow64Packages.stable # Wine
     appimage-run # Use this to run Appimages, they don't work by default
     bc # A calculator, required for the imagemagick multicrop script
     difftastic # A tool to create better diffs
@@ -66,7 +66,7 @@
     unstable.vscodium.fhs # Goodbye Microsoft
     bottles # Run Windows apps
     audacity
-    blender-hip
+    pkgsRocm.blender
     kicad
     unstable.yaak
     obs-studio
@@ -121,7 +121,7 @@
     gtk3
 
     # Dev tools
-    nodePackages.pnpm
+    pnpm
     unstable.cargo
     rustc
     go
@@ -136,7 +136,7 @@
     android-tools
     thonny
     nodejs_24
-    nixfmt-rfc-style
+    nixfmt
     plantuml
     graphviz # For PlantUML diagrams
     ninja
@@ -149,7 +149,7 @@
     fontconfig
 
     # Games
-    superTuxKart
+    supertuxkart
     unstable.flightgear
     prismlauncher
     dolphin-emu
