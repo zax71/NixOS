@@ -27,6 +27,10 @@
       url = "github:jneem/probe-rs-rules";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    qtengine = {
+      url = "github:kossLAN/qtengine";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

@@ -38,6 +38,7 @@
     ./../../modules/udev.nix
     ./../../modules/virtualisation.nix
     ./../../modules/xdg-portal.nix
+    ./../../modules/qtTheme.nix
 
     # Assorted packages
     ./packages.nix
@@ -56,8 +57,6 @@
   };
 
   environment.variables = {
-    QT_QPA_PLATFORMTHEME = "qt5ct";
-    GTK_THEME = "Adwaita:dark";
     GSETTINGS_SCHEMA_DIR = "${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}/glib-2.0/schemas";
   };
 

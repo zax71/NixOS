@@ -214,6 +214,26 @@
         "type": "github"
       }
     },
+    "qtengine": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1778644540,
+        "narHash": "sha256-D7mzavE5WfLyvEXV0pvO3/gxC+SSmfjw4Lxy7I5qvnI=",
+        "owner": "kossLAN",
+        "repo": "qtengine",
+        "rev": "073987f0120ac77a92fb9f0c0877aa7f1f04d3bf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "kossLAN",
+        "repo": "qtengine",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "disko": "disko",
@@ -223,6 +243,7 @@
         "nixpkgs": "nixpkgs",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "probe-rs-rules": "probe-rs-rules",
+        "qtengine": "qtengine",
         "sops-nix": "sops-nix"
       }
     },

@@ -1,16 +1,11 @@
 {
   pkgs,
-  lib,
   ...
 }:
 {
-  qt = {
-    enable = true;
-    style.name = "Breeze";
-    style.package = pkgs.kdePackages.breeze;
-  };
   gtk = {
     enable = true;
+    colorScheme = "dark";
     iconTheme = {
       package = pkgs.adwaita-icon-theme;
       name = "Adwaita";
