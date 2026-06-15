@@ -4,6 +4,7 @@
   hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
+      amf
       rocmPackages.clr
       rocmPackages.clr.icd
       rocmPackages.rocm-runtime
@@ -16,4 +17,5 @@
     rocmPackages.hipcc
   ];
   services.xserver.videoDrivers = [ "amdgpu" ];
+  boot.initrd.kernelModules = [ "amdgpu" ];
 }
