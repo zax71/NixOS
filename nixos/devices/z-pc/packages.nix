@@ -69,7 +69,7 @@
     pkgsRocm.blender
     kicad
     unstable.yaak
-    obs-studio
+
     unstable.bruno
     davinci-resolve
     unstable.rpi-imager
