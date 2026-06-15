@@ -69,6 +69,7 @@
     pkgsRocm.blender
     kicad
     unstable.yaak
+    teams-for-linux # Remove soon I hope :(
 
     unstable.bruno
     davinci-resolve
@@ -150,7 +151,7 @@
 
     # Games
     supertuxkart
-    unstable.flightgear
+    # unstable.flightgear
     prismlauncher
     dolphin-emu
   ];
