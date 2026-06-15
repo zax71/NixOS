@@ -39,6 +39,7 @@
     ./../../modules/virtualisation.nix
     ./../../modules/xdg-portal.nix
     ./../../modules/qtTheme.nix
+    ./../../modules/tpm.nix
 
     # Assorted packages
     ./packages.nix

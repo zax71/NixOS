@@ -16,6 +16,7 @@
         "docker"
         "dialout"
         "plugdev"
+        "tss" # TPM
       ];
     };
   };
