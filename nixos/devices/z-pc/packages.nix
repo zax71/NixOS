@@ -130,6 +130,8 @@
     gh
     cmake
     gcc
+    gdb
+    lldb
     gnumake
     godot_4
     jetbrains.idea

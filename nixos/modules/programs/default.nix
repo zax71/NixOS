@@ -6,5 +6,6 @@
     ./dconf.nix
     ./steam.nix
     ./obs.nix
+    ./ghidra.nix
   ];
 }
