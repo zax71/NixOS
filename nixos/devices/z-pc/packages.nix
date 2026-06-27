@@ -70,6 +70,7 @@
     kicad
     unstable.yaak
     teams-for-linux # Remove soon I hope :(
+    magicq # Chamsys lighting software
 
     unstable.bruno
     davinci-resolve
