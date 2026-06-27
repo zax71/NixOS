@@ -52,7 +52,7 @@
           inherit inputs;
         };
         modules = [
-          ./nixos/devices/z-pc/configuration.nix
+          ./legacy/nixos/devices/z-pc/configuration.nix
           nix-flatpak.nixosModules.nix-flatpak
           inputs.disko.nixosModules.disko
         ];
@@ -64,7 +64,7 @@
           inherit inputs;
         };
         modules = [
-          ./nixos/devices/pc-theatrum/configuration.nix
+          ./legacy/nixos/devices/pc-theatrum/configuration.nix
           inputs.disko.nixosModules.disko
         ];
       };
@@ -75,7 +75,7 @@
           inherit inputs;
         };
         modules = [
-          ./home-manager/home.nix
+          ./legacy/home-manager/home.nix
           inputs.nixcord.homeModules.nixcord
         ];
       };
