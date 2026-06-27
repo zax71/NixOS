@@ -1,7 +1,7 @@
 { inputs, ... }: {
   imports = [
     inputs.flake-parts.flakeModules.modules
-    #inputs.disko.flakeModules.default
+    inputs.disko.flakeModules.default
   ];
   config = {
     systems = [
