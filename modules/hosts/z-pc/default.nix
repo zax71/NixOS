@@ -1,7 +1,7 @@
 { self, inputs, ... }: {
   flake.nixosConfigurations.z-pc = inputs.nixpkgs.lib.nixosSystem {
     modules = [
-      self.modules.nixos.z-pc.configuration
+      self.modules.nixos.z-pcConfiguration
     ];
   };
 

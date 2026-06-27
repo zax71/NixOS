@@ -1,7 +1,7 @@
 { self, inputs, ... }:
 {
 
-  flake.modules.nixos.z-pc.packages =
+  flake.modules.nixos.z-pc =
     { pkgs, ... }:
 
     {

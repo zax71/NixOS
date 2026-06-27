@@ -5,7 +5,7 @@
 #  disko.devices.disk.main.device = "/dev/sda";
 # }
 {
-  flake.diskoConfigurations.z-pc.disko = {
+  flake.diskoConfigurations.z-pc = {
     disko.devices = {
       disk = {
         main = {

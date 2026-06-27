@@ -1,14 +1,9 @@
 { self, inputs, ... }: {
 
-  flake.modules.nixos.z-pc.configuration = { pkgs, lib, ... }: {
+  flake.modules.nixos.z-pcConfiguration = { pkgs, lib, ... }: {
     # import any other modules from here
     imports = [
-      self.modules.nixos.z-pc.disko
-      self.modules.nixos.z-pc.graphics
-      self.modules.nixos.z-pc.hardware
-      self.modules.nixos.z-pc.packages
       self.modules.nixos.z-pc
-
       inputs.disko.nixosModules.disko
 
       # Legacy imports
