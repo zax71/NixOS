@@ -1,6 +1,6 @@
 { self, inputs, ... }:
 {
-  flake.nixosModules.z-pc.hardware =
+  flake.modules.nixos.z-pc.hardware =
     {
       config,
       lib,

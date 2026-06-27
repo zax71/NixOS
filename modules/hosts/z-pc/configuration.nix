@@ -3,11 +3,13 @@
   flake.modules.nixos.z-pc.configuration = { pkgs, lib, ... }: {
     # import any other modules from here
     imports = [
-      self.nixosModules.z-pc.disko
-      self.nixosModules.z-pc.graphics
-      self.nixosModules.z-pc.hardware
-      self.nixosModules.z-pc.packages
-      self.nixosModules.z-pc.inputs.disko.nixosModules.disko
+      self.modules.nixos.z-pc.disko
+      self.modules.nixos.z-pc.graphics
+      self.modules.nixos.z-pc.hardware
+      self.modules.nixos.z-pc.packages
+      self.modules.nixos.z-pc
+
+      inputs.disko.nixosModules.disko
 
       # Legacy imports
       ./../../../legacy/nixos/modules/awesomewm.nix
