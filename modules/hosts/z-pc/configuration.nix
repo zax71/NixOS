@@ -4,12 +4,17 @@
     # import any other modules from here
     imports = [
       self.modules.nixos.z-pc
+      self.modules.nixos.themeQT
+      self.modules.nixos.unstable
+      self.modules.nixos.secrets
+      self.modules.nixos.udev
+      self.modules.nixos.unstable
 
       # Legacy imports
       ./../../../legacy/nixos/modules/awesomewm.nix
       ./../../../legacy/nixos/modules/bluetooth.nix
       ./../../../legacy/nixos/modules/docker.nix
-      ./../../../legacy/nixos/modules/flatpak.nix
+      #./../../../legacy/nixos/modules/flatpak.nix
       ./../../../legacy/nixos/modules/fonts.nix
       ./../../../legacy/nixos/modules/java.nix
       ./../../../legacy/nixos/modules/keyring.nix
@@ -21,15 +26,11 @@
       ./../../../legacy/nixos/modules/opentabletdriver.nix
       ./../../../legacy/nixos/modules/printing.nix
       ./../../../legacy/nixos/modules/programs
-      ./../../../legacy/nixos/modules/secrets
       ./../../../legacy/nixos/modules/shares
       ./../../../legacy/nixos/modules/sound.nix
       ./../../../legacy/nixos/modules/user.nix
-      ./../../../legacy/nixos/modules/unstable.nix
-      ./../../../legacy/nixos/modules/udev.nix
       ./../../../legacy/nixos/modules/virtualisation.nix
       ./../../../legacy/nixos/modules/xdg-portal.nix
-      ./../../../legacy/nixos/modules/qtTheme.nix
       ./../../../legacy/nixos/modules/tpm.nix
     ];
 
