@@ -21,7 +21,7 @@
   home = {
     username = "zax";
     homeDirectory = "/home/zax";
-    stateVersion = "25.05";
+    stateVersion = "26.05";
   };
 
   # I'd love a neater solution to this

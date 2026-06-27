@@ -7,7 +7,7 @@
       nixd
       tinymist
       rust-analyzer
-      nixfmt-rfc-style
+      nixfmt
       typstyle
       ty
       ruff
@@ -63,7 +63,7 @@
       language = [
         {
           name = "nix";
-          formatter.command = lib.getExe pkgs.nixfmt-rfc-style;
+          formatter.command = lib.getExe pkgs.nixfmt;
           auto-format = true;
           language-servers = [ "nixd" ];
         }

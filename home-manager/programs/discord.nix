@@ -11,11 +11,11 @@
         "https://raw.githubusercontent.com/zax71/discord-themes/refs/heads/main/theme.css"
       ];
       plugins = {
-        BlurNSFW.enable = true;
-        ClearURLs.enable = true;
+        blurNsfw.enable = true;
+        clearUrls.enable = true;
         crashHandler.enable = true;
         dontRoundMyTimestamps.enable = true;
-        friendsSince.enable = true;
+        #friendsSince.enable = true;
         fullSearchContext.enable = true;
         validReply.enable = true;
         validUser.enable = true;
