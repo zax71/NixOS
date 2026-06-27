@@ -4,7 +4,6 @@
     # import any other modules from here
     imports = [
       self.modules.nixos.z-pc
-      inputs.disko.nixosModules.disko
 
       # Legacy imports
       ./../../../legacy/nixos/modules/awesomewm.nix
