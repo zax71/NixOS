@@ -8,7 +8,6 @@
     ./programs/neovim
     ./programs/mpris-proxy.nix
     ./programs/awesome
-    ./programs/helix.nix
     ./programs/vscodium.nix
   ];
 }

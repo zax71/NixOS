@@ -46,6 +46,7 @@
           discord
           shell
           yazi
+          helix
         ]
         ++ [
           ../../legacy/home-manager/home.nix
