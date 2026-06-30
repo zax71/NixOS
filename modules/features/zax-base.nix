@@ -44,6 +44,8 @@
         with inputs.self.modules.homeManager;
         [
           discord
+          shell
+          yazi
         ]
         ++ [
           ../../legacy/home-manager/home.nix
