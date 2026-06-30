@@ -13,21 +13,8 @@
     ./programs/mpris-proxy.nix
     ./programs/yazi.nix
     ./programs/awesome
-    ./programs/discord.nix
     ./programs/helix.nix
     ./programs/vscodium.nix
     ./programs/zellij.nix
   ];
-  home = {
-    username = "zax";
-    homeDirectory = "/home/zax";
-    stateVersion = "26.05";
-  };
-
-  # I'd love a neater solution to this
-  nixpkgs.config.allowUnfreePredicate =
-    pkg:
-    builtins.elem (pkgs.lib.getName pkg) [
-      "discord"
-    ];
 }
