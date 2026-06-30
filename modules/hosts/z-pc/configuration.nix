@@ -10,6 +10,9 @@
       self.modules.nixos.udev
       self.modules.nixos.unstable
 
+      inputs.disko.nixosModules.disko
+      self.diskoConfigurations.z-pc
+
       # Legacy imports
       ./../../../legacy/nixos/modules/awesomewm.nix
       ./../../../legacy/nixos/modules/bluetooth.nix
