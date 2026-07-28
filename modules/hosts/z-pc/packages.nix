@@ -99,13 +99,14 @@
         libsecret
         easyeffects
         pavucontrol
+        josm # OpenStreetMap editor
 
         # Art
         aseprite
         drawio
         unstable.gimp3
         nomacs # Image viewer
-        unstable.darktable
+        darktable
         rawtherapee
         inkscape
         krita
