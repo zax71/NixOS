@@ -100,7 +100,7 @@
         easyeffects
         pavucontrol
         josm # OpenStreetMap editor
-
+        comaps # OpenStreetMap Renderer
         # Art
         aseprite
         drawio
