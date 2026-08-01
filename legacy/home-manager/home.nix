@@ -7,7 +7,6 @@
     ./programs/rofi.nix
     ./programs/neovim
     ./programs/mpris-proxy.nix
-    ./programs/awesome
     ./programs/vscodium.nix
   ];
 }

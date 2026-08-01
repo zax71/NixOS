@@ -2,41 +2,45 @@
 
   flake.modules.nixos.z-pcConfiguration = { pkgs, lib, ... }: {
     # import any other modules from here
-    imports = [
-      self.modules.nixos.zax-base # Setup user and home manager
+    imports =
+      with self.modules.nixos;
+      [
+        zax-base # Setup user and home manager
+        base-desktop # Setup desktop specific services
 
-      self.modules.nixos.z-pc
-      self.modules.nixos.themeQT
-      self.modules.nixos.unstable
-      self.modules.nixos.secrets
-      self.modules.nixos.udev
-      self.modules.nixos.unstable
+        z-pc
+        themeQT
+        unstable
+        secrets
+        udev
+        unstable
+        bluetooth
+        nix-options
+        awesomewm
+      ]
+      ++ [
+        inputs.disko.nixosModules.disko
+        self.diskoConfigurations.z-pc
 
-      inputs.disko.nixosModules.disko
-      self.diskoConfigurations.z-pc
-
-      # Legacy imports
-      ./../../../legacy/nixos/modules/awesomewm.nix
-      ./../../../legacy/nixos/modules/bluetooth.nix
-      ./../../../legacy/nixos/modules/docker.nix
-      #./../../../legacy/nixos/modules/flatpak.nix
-      ./../../../legacy/nixos/modules/fonts.nix
-      ./../../../legacy/nixos/modules/java.nix
-      ./../../../legacy/nixos/modules/keyring.nix
-      ./../../../legacy/nixos/modules/LaTeX.nix
-      ./../../../legacy/nixos/modules/locale.nix
-      ./../../../legacy/nixos/modules/mime-types.nix
-      ./../../../legacy/nixos/modules/networking.nix
-      ./../../../legacy/nixos/modules/nix-options.nix
-      ./../../../legacy/nixos/modules/opentabletdriver.nix
-      ./../../../legacy/nixos/modules/printing.nix
-      ./../../../legacy/nixos/modules/programs
-      ./../../../legacy/nixos/modules/shares
-      ./../../../legacy/nixos/modules/sound.nix
-      ./../../../legacy/nixos/modules/virtualisation.nix
-      ./../../../legacy/nixos/modules/xdg-portal.nix
-      ./../../../legacy/nixos/modules/tpm.nix
-    ];
+        # Legacy imports
+        ./../../../legacy/nixos/modules/docker.nix
+        #./../../../legacy/nixos/modules/flatpak.nix
+        ./../../../legacy/nixos/modules/fonts.nix
+        ./../../../legacy/nixos/modules/java.nix
+        ./../../../legacy/nixos/modules/keyring.nix
+        ./../../../legacy/nixos/modules/LaTeX.nix
+        ./../../../legacy/nixos/modules/locale.nix
+        ./../../../legacy/nixos/modules/mime-types.nix
+        ./../../../legacy/nixos/modules/networking.nix
+        ./../../../legacy/nixos/modules/opentabletdriver.nix
+        ./../../../legacy/nixos/modules/printing.nix
+        ./../../../legacy/nixos/modules/programs
+        ./../../../legacy/nixos/modules/shares
+        ./../../../legacy/nixos/modules/sound.nix
+        ./../../../legacy/nixos/modules/virtualisation.nix
+        ./../../../legacy/nixos/modules/xdg-portal.nix
+        ./../../../legacy/nixos/modules/tpm.nix
+      ];
 
     # nix.settings.experimental-features = [
     #   "nix-command"
