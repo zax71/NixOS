@@ -110,6 +110,7 @@
         rawtherapee
         inkscape
         krita
+        hugin # Panorama Stitcher
 
         # KDE stuff
         kdePackages.breeze
