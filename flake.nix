@@ -31,6 +31,10 @@
       url = "github:kossLAN/qtengine";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    noctalia = {
+      url = "github:noctalia-dev/noctalia";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Stuff for Dendritic
     flake-parts.url = "github:hercules-ci/flake-parts";

@@ -6,9 +6,14 @@
 
       programs.nixcord = {
         enable = true;
-        #vesktop.enable = false;
-        discord.vencord.enable = true;
-        discord.openASAR.enable = false;
+
+        discord = {
+          commandLineArgs = [
+            "--enable-wayland-ime"
+          ];
+          vencord.enable = true;
+          openASAR.enable = false;
+        };
         config = {
           themeLinks = [
             "https://raw.githubusercontent.com/zax71/discord-themes/refs/heads/main/theme.css"

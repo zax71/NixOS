@@ -17,6 +17,7 @@
         bluetooth
         nix-options
         awesomewm
+        niri
         programmes
         keyring
       ]

@@ -75,6 +75,7 @@
           shell
           yazi
           helix
+          noctalia
         ]
         ++ [
           ../../legacy/home-manager/home.nix
