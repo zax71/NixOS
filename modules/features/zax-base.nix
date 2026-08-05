@@ -1,4 +1,4 @@
-{ inputs, ... }: {
+{ self, inputs, ... }: {
   flake.modules.nixos.zax-base = { pkgs, config, ... }: {
     users = {
       groups = {
@@ -20,15 +20,43 @@
       };
     };
     programs.zsh.enable = true;
+    fonts = {
+      packages = with pkgs; [
+        monocraft
+        inter
+        noto-fonts
+        open-sans
+        nerd-fonts.jetbrains-mono
+        nerd-fonts.departure-mono
+        font-awesome
 
-    # bring in Home Manager
-    imports = [ inputs.home-manager.nixosModules.home-manager ];
+      ];
+
+      fontconfig.defaultFonts = {
+        serif = [ "Noto Serif" ];
+        sansSerif = [ "Inter" ];
+        monospace = [ "JetBrainsMono Nerd Font" ];
+      };
+    };
+
+    time.timeZone = "Europe/London";
+    i18n.defaultLocale = "en_GB.UTF-8";
+    console.keyMap = "uk";
+
+    imports =
+      with self.modules.nixos;
+      [
+        mime-types # What programme to use to open a file type - something that's user specific
+      ]
+      ++ [
+        inputs.home-manager.nixosModules.home-manager # Bring in home manager from nixpkgs
+      ];
 
     home-manager = {
       useGlobalPkgs = true;
       backupFileExtension = "hmbckp";
       users.zax.imports = [
-        inputs.self.modules.homeManager.zax-base
+        inputs.self.modules.homeManager.zax-base # Import root HM config
       ];
     };
   };

@@ -17,24 +17,18 @@
         bluetooth
         nix-options
         awesomewm
+        programmes
+        keyring
       ]
       ++ [
         inputs.disko.nixosModules.disko
         self.diskoConfigurations.z-pc
 
         # Legacy imports
-        ./../../../legacy/nixos/modules/docker.nix
         #./../../../legacy/nixos/modules/flatpak.nix
-        ./../../../legacy/nixos/modules/fonts.nix
-        ./../../../legacy/nixos/modules/java.nix
-        ./../../../legacy/nixos/modules/keyring.nix
         ./../../../legacy/nixos/modules/LaTeX.nix
-        ./../../../legacy/nixos/modules/locale.nix
-        ./../../../legacy/nixos/modules/mime-types.nix
         ./../../../legacy/nixos/modules/networking.nix
-        ./../../../legacy/nixos/modules/opentabletdriver.nix
         ./../../../legacy/nixos/modules/printing.nix
-        ./../../../legacy/nixos/modules/programs
         ./../../../legacy/nixos/modules/shares
         ./../../../legacy/nixos/modules/sound.nix
         ./../../../legacy/nixos/modules/virtualisation.nix

@@ -162,6 +162,7 @@
         supertuxkart
         # unstable.flightgear
         prismlauncher
+        cubiomes-viewer
         dolphin-emu
       ];
     };
