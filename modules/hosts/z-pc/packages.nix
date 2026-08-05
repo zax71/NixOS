@@ -65,7 +65,7 @@
         hunspell # Libreoffice spell checker
         zotero
         obsidian
-        rsibreak
+        # rsibreak # Replaced with Noctalia Shell Plugin
         # vscode.fhs
         unstable.vscodium.fhs # Goodbye Microsoft
         bottles # Run Windows apps

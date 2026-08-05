@@ -29,7 +29,11 @@
 
           input = {
             keyboard.xkb.layout = "gb";
-            focus-follows-mouse = { };
+            focus-follows-mouse = _: {
+              props = {
+                max-scroll-amount = "10%";
+              };
+            };
           };
 
           prefer-no-csd = { };
@@ -40,6 +44,7 @@
             "Mod+Return".spawn-sh = lib.getExe pkgs.kitty;
             "Mod+Q".close-window = { };
             "Mod+Space".spawn-sh = "noctalia msg panel-toggle launcher";
+            "Mod+b".spawn-sh = lib.getExe pkgs.firefox;
 
             "Mod+F".maximize-column = { };
             "Mod+G".fullscreen-window = { };

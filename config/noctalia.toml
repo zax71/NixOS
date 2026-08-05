@@ -66,6 +66,19 @@ widget_order = [ "lockscreen-login-box@DP-1", "lockscreen-login-box@HDMI-A-1" ]
         show_unlock_hint = true
         show_weather = true
 
+[plugins]
+enabled = [ "apex077/eyecare" ]
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/official-plugins"
+    name = "official"
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/community-plugins"
+    name = "community"
+
 [shell.panel]
 launcher_placement = "attached"
 
