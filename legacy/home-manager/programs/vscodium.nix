@@ -102,7 +102,7 @@
           "editor.wordWrap" = "on";
           "editor.defaultFormatter" = "James-Yu.latex-workshop";
         };
-        latex-workshop.formatting.latex = "tex-fmt";
+        latex-workshop.formatting.latex = lib.getExe pkgs.tex-fmt;
         git.enableSmartCommit = true;
         editor.linkedEditing = true;
         editor.formatOnSave = true;

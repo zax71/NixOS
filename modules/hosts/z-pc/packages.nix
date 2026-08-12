@@ -6,12 +6,11 @@
 
     {
       environment.systemPackages = with pkgs; [
-        home-manager
 
         #(pkgs.callPackage ./sacnview.nix { })
 
         # CLI apps
-        ## Core CLI apps
+        ## Core CLI apps / standard utils replacements
         vim
         wget
         bat
@@ -20,28 +19,26 @@
         zip
         fzf
         unstable.fastfetch
+        git
         btop-rocm
         alsa-utils
         tldr
         vulkan-tools
-        neo-cowsay
         exiftool
-        playerctl # MPRIS control, needed to get WH1000XM4 headset media controls to work
-        asciiquarium-transparent
+        difftastic # A tool to create better diffs
 
         ## CLI utilities
         cmus # Terminal music player
+        asciiquarium-transparent
+        neo-cowsay
         sshfs
         lazygit
         yt-dlp
         ffmpeg
-        uv # A Python package manager. I should probably only use this in a dev flake...
-        caligula
+        caligula # Disk burning tool
         luarocks
-        wineWow64Packages.stable # Wine
         appimage-run # Use this to run Appimages, they don't work by default
         bc # A calculator, required for the imagemagick multicrop script
-        difftastic # A tool to create better diffs
         presenterm # CLI presentation tool
         typst
         tinymist # Typst LSP
@@ -65,40 +62,44 @@
 
         ## Media
         vlc
-        davinci-resolve
+        davinci-resolve # Video editor
+        kdePackages.kdenlive # Video editor
         lmms
-        kitty
+        magicq # Chamsys lighting software
+        qlcplus # lighting software
+
+        ## Core desktop apps
+        kitty # Terminal
+        gparted # Partition editor
+        pika-backup
+        kdePackages.okular # PDF viewer
+        kdePackages.skanpage # Scanning
+        kdePackages.ark # Archive manager
+        nautilus # File manager
+
+        ## Writing
         libreoffice
         hunspell # Libreoffice spell checker
         zotero
         obsidian
-        # rsibreak # Replaced with Noctalia Shell Plugin
-        # vscode.fhs
-        unstable.vscodium.fhs # Goodbye Microsoft
+
+        ## Wine
         bottles # Run Windows apps
+        wineWow64Packages.stable # Wine
+
+        ## Productivity
         audacity
         pkgsRocm.blender
         kicad
-        unstable.yaak
-        magicq # Chamsys lighting software
 
-        unstable.bruno
-        unstable.rpi-imager
-        gparted
         wireshark
-        pika-backup
-        qlcplus # lighting software
-        annotator
-        gscan2pdf # Scanning
         unstable.kmidimon # MIDI packet sniffer
         parabolic
         via # Keyboard configuiration
-        seahorse # manage Gnome keyring
-        libsecret
-        easyeffects
-        pavucontrol
+
         josm # OpenStreetMap editor
         comaps # OpenStreetMap Renderer
+
         # Art
         aseprite
         drawio
@@ -111,50 +112,27 @@
         hugin # Panorama Stitcher
 
         # KDE stuff
-        kdePackages.breeze
         kdePackages.qtsvg
         kdePackages.kio-fuse
         kdePackages.kio-extras
         kdePackages.qtstyleplugin-kvantum
-        kdePackages.skanpage # Scanning
-        kdePackages.okular
-        kdePackages.marble # mapping
-        kdePackages.kdenlive
-        kdePackages.ark # Archive manager
 
         # GNOME stuff
-        nautilus
         gtk3
 
         # Dev tools
-        pnpm
-        unstable.cargo
-        rustc
-        go
-        git
         gh
-        cmake
-        gcc
-        gdb
-        lldb
-        gnumake
-        godot_4
+
+        ## IDE
+        godot
         jetbrains.idea
         android-studio
         android-tools
         thonny
-        nodejs_24
-        nixfmt
-        plantuml
-        graphviz # For PlantUML diagrams
-        ninja
-        tex-fmt # format LaTeX files, used in VSCode
-        #gradle
-        #esptool
-
-        # Xorg deps
-        libxkbcommon
-        fontconfig
+        unstable.bruno # Web request IDE
+        unstable.yaak # Web request IDE
+        unstable.rpi-imager # Make Raspberry Pi SD card OS images
+        unstable.vscodium.fhs # Goodbye Microsoft
 
         # Games
         supertuxkart

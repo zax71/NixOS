@@ -52,6 +52,11 @@
         inputs.home-manager.nixosModules.home-manager # Bring in home manager from nixpkgs
       ];
 
+    # Install Home Manager
+    environment.systemPackages = with pkgs; [
+      home-manager
+    ];
+
     home-manager = {
       useGlobalPkgs = true;
       backupFileExtension = "hmbckp";
