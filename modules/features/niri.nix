@@ -45,21 +45,29 @@
             "Mod+Q".close-window = { };
             "Mod+Space".spawn-sh = "noctalia msg panel-toggle launcher";
             "Mod+b".spawn-sh = lib.getExe pkgs.firefox;
+            "Mod+Shift+s".spawn-sh = "grim - | satty -f -";
+            "Mod+Shift+Slash".show-hotkey-overlay = { };
 
             "Mod+F".maximize-column = { };
             "Mod+G".fullscreen-window = { };
-            "Mod+Shift+F".toggle-window-floating = { };
+            "Mod+Control+Space".toggle-window-floating = { };
             "Mod+C".center-column = { };
+            "Mod+O".move-window-to-monitor-left = { };
 
             "Mod+Left".focus-column-left = { };
             "Mod+Right".focus-column-right = { };
-            "Mod+Up".focus-window-up = { };
-            "Mod+Down".focus-window-down = { };
+            "Mod+Up".focus-window-or-workspace-up = { };
+            "Mod+Down".focus-window-or-workspace-down = { };
 
             "Mod+Shift+Left".move-column-left = { };
             "Mod+Shift+Right".move-column-right = { };
-            "Mod+Shift+Up".move-window-up = { };
-            "Mod+Shift+Down".move-window-down = { };
+            "Mod+Shift+Up".move-window-up-or-to-workspace-up = { };
+            "Mod+Shift+Down".move-window-down-or-to-workspace-down = { };
+
+            "Mod+Ctrl+Left".set-column-width = "-5%";
+            "Mod+Ctrl+Right".set-column-width = "+5%";
+            "Mod+Ctrl+Up".set-window-height = "-5%";
+            "Mod+Ctrl+Down".set-window-height = "+5%";
 
             "Mod+1".focus-workspace = "w0";
             "Mod+2".focus-workspace = "w1";
@@ -85,11 +93,14 @@
 
             "XF86AudioRaiseVolume".spawn-sh = "wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%+";
             "XF86AudioLowerVolume".spawn-sh = "wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%-";
+            "XF86AudioMute".spawn-sh = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+            "XF86AudioMicMute".spawn-sh = "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
 
-            "Mod+Ctrl+Left".set-column-width = "-5%";
-            "Mod+Ctrl+Right".set-column-width = "+5%";
-            "Mod+Ctrl+Up".set-window-height = "-5%";
-            "Mod+Ctrl+Down".set-window-height = "+5%";
+            "XF86AudioPlay".spawn-sh = "${lib.getExe pkgs.playerctl} play-pause";
+            "XF86AudioPause".spawn-sh = "${lib.getExe pkgs.playerctl} play-pause";
+            "XF86AudioStop".spawn-sh = "${lib.getExe pkgs.playerctl} stop";
+            "XF86AudioPrev".spawn-sh = "${lib.getExe pkgs.playerctl} previous";
+            "XF86AudioNext".spawn-sh = "${lib.getExe pkgs.playerctl} next";
 
             "Mod+WheelScrollDown".focus-column-left = { };
             "Mod+WheelScrollUp".focus-column-right = { };
