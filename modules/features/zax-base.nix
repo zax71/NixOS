@@ -76,6 +76,7 @@
           yazi
           helix
           noctalia
+          screenshots
         ]
         ++ [
           ../../legacy/home-manager/home.nix

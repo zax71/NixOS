@@ -11,6 +11,7 @@
         #(pkgs.callPackage ./sacnview.nix { })
 
         # CLI apps
+        ## Core CLI apps
         vim
         wget
         bat
@@ -19,22 +20,23 @@
         zip
         fzf
         unstable.fastfetch
-        cmus # Terminal music player
-        sshfs
         btop-rocm
         alsa-utils
-        lazygit
         tldr
-        yt-dlp
-        ffmpeg
-        uv # A Python package manager. I should probably only use this in a dev flake...
         vulkan-tools
         neo-cowsay
         exiftool
-        caligula
         playerctl # MPRIS control, needed to get WH1000XM4 headset media controls to work
-        sops # Secrets management for nix config
-        dragon-drop # Yazi drag and drop
+        asciiquarium-transparent
+
+        ## CLI utilities
+        cmus # Terminal music player
+        sshfs
+        lazygit
+        yt-dlp
+        ffmpeg
+        uv # A Python package manager. I should probably only use this in a dev flake...
+        caligula
         luarocks
         wineWow64Packages.stable # Wine
         appimage-run # Use this to run Appimages, they don't work by default
@@ -43,24 +45,29 @@
         presenterm # CLI presentation tool
         typst
         tinymist # Typst LSP
-        asciiquarium-transparent
         devenv
 
-        # Nvim deps
-        unstable.tailwindcss-language-server # This is an LSP, it isn't installed in the nvim config because the stable version doesn't work
-        ripgrep # TODO: Move this in to home-manager
-
         # Desktop applications
+        ## Browsers
         firefox
         epiphany # Ugh, webkit
         # chromium # Web dev is great...STOP BEING MY DEFAULT BROWSER FFS
-        dino
-        movim
-        kaidan
+
+        ## Social
+        dino # XMPP client
+        kaidan # XMPP client
         thunderbird
+        unstable.signal-desktop # e2ee chat
+        halloy # IRC
+        element-desktop # Matrix clients
+        fluffychat
+        cinny-desktop
+
+        ## Media
         vlc
+        davinci-resolve
+        lmms
         kitty
-        flameshot
         libreoffice
         hunspell # Libreoffice spell checker
         zotero
@@ -73,28 +80,19 @@
         pkgsRocm.blender
         kicad
         unstable.yaak
-        teams-for-linux # Remove soon I hope :(
         magicq # Chamsys lighting software
 
         unstable.bruno
-        davinci-resolve
         unstable.rpi-imager
         gparted
         wireshark
         pika-backup
         qlcplus # lighting software
         annotator
-        unstable.signal-desktop # e2ee chat
         gscan2pdf # Scanning
-        halloy # IRC
         unstable.kmidimon # MIDI packet sniffer
-        lmms
         parabolic
-        anki # Flashcards
         via # Keyboard configuiration
-        element-desktop
-        fluffychat
-        cinny-desktop
         seahorse # manage Gnome keyring
         libsecret
         easyeffects

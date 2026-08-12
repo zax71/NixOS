@@ -84,6 +84,7 @@ in
     typescript-language-server
     eslint_d
     prettier
+    ripgrep
   ];
 
   programs.neovim = {

@@ -10,6 +10,11 @@
     {
       imports = [ inputs.sops-nix.nixosModules.sops ];
 
+      # Install sops package
+      environment.systemPackages = with pkgs; [
+        sops
+      ];
+
       sops.defaultSopsFile = ./secrets.yaml;
       sops.defaultSopsFormat = "yaml";
       # If this is not available, system will still build just without secrets
