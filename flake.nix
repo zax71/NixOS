@@ -32,8 +32,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     noctalia = {
-      url = "github:noctalia-dev/noctalia";
-      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:noctalia-dev/noctalia/cachix";
+      # No following nixpkgs as I'm using Cachix
     };
 
     # Stuff for Dendritic
