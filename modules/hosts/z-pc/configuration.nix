@@ -18,8 +18,13 @@
         nix-options
         awesomewm
         niri
-        programmes
+
         keyring
+
+        coreCliProgrammes
+        desktopProgrammes
+        developmentProgrammes
+        gameProgrammes
       ]
       ++ [
         inputs.disko.nixosModules.disko
@@ -27,7 +32,6 @@
 
         # Legacy imports
         #./../../../legacy/nixos/modules/flatpak.nix
-        ./../../../legacy/nixos/modules/LaTeX.nix
         ./../../../legacy/nixos/modules/networking.nix
         ./../../../legacy/nixos/modules/printing.nix
         ./../../../legacy/nixos/modules/shares
