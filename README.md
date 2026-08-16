@@ -1,6 +1,6 @@
 # NixOS config
 
-[NixOS](https://nixos.org/) is an entirely declarative package manager and Linux distribution. It's config is all in one place and for me... That one place is here! I use the [NNN stack](https://the-nnn-stack.github.io/) (Nix Niri Noctalia) that I transitioned to from AwesomeWM.
+This is my [NixOS](https://nixos.org/) configuration using the Dendritic patern. I use the [NNN stack](https://the-nnn-stack.github.io/) (Nix Niri Noctalia) that I transitioned to from AwesomeWM.
 
 ## Features
 
