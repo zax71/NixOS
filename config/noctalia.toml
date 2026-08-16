@@ -1,10 +1,95 @@
 [bar.default]
 center = [ "workspaces" ]
+end = [ "tray", "notifications", "clipboard", "network", "bluetooth", "volume", "brightness", "battery", "session" ]
 position = "right"
-start = [ "clock", "wallpaper" ]
+start = [ "clock", "date", "spacer_2", "cpu", "temp", "ram" ]
 
     [bar.default.monitor.DP-1]
     enabled = false
+
+[desktop_widgets]
+schema_version = 2
+widget_order = [
+    "desktop-widget-0000000000000001",
+    "desktop-widget-0000000000000002",
+    "desktop-widget-0000000000000003",
+    "desktop-widget-0000000000000004"
+]
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000001]
+    box_height = 96.0
+    box_width = 256.0
+    cx = 192.0
+    cy = 1036.0
+    output = "DP-1"
+    rotation = 0.0
+    type = "clock"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000001.settings]
+        background = false
+        clock_style = "digital"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000002]
+    box_height = 144.0
+    box_width = 352.0
+    cx = 192.5
+    cy = 500.0
+    output = "DP-1"
+    rotation = 0.0
+    type = "sysmon"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000002.settings]
+        background = true
+        background_color = "surface"
+        background_opacity = 0.80000000000000004
+        background_padding = 10
+        background_radius = 12
+        color = "primary"
+        color2 = "secondary"
+        display = "graph"
+        font_family = ""
+        gauge_layout = "horizontal"
+        highlight_color = "error"
+        interface = ""
+        label_min_width = 0
+        network_speed_compact = false
+        network_speed_unit = "auto"
+        shadow = true
+        show_label = true
+        stat = "cpu_usage"
+        stat2 = "ram_pct"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000003]
+    box_height = 400.0
+    box_width = 352.0
+    cx = 192.5
+    cy = 215.0
+    output = "DP-1"
+    rotation = 0.0
+    type = "calendar"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000003.settings]
+        background = true
+        show_events = false
+        show_week_numbers = false
+
+    [desktop_widgets.widget.desktop-widget-0000000000000004]
+    box_height = 80.0
+    box_width = 96.0
+    cx = 48.0
+    cy = 1036.0
+    output = "DP-1"
+    rotation = 0.0
+    type = "clock"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000004.settings]
+        background = false
+        format = "{:%d\\n%b}"
 
 [lockscreen_widgets]
 enabled = false
@@ -79,8 +164,11 @@ enabled = [ "apex077/eyecare" ]
     location = "https://github.com/noctalia-dev/community-plugins"
     name = "community"
 
-[shell.panel]
-launcher_placement = "attached"
+[shell]
+settings_show_advanced = false
+
+    [shell.panel]
+    launcher_placement = "attached"
 
 [theme]
 builtin = "Noctalia"
@@ -114,8 +202,35 @@ per_monitor_directories = true
 [widget.control-center]
 enabled = false
 
+[widget.cpu]
+visualization = "none"
+
+[widget.date]
+enabled = false
+
 [widget.media]
 enabled = false
 
+[widget.ram]
+label_show_units = false
+visualization = "none"
+
+[widget.spacer_2]
+type = "spacer"
+
+[widget.sysmon]
+visualization = "graph"
+
+[widget.temp]
+label_show_units = false
+visualization = "none"
+
 [widget.tray]
 drawer = true
+
+[widget.wallpaper]
+enabled = false
+
+[widget.workspaces]
+hide_when_empty = true
+style = "focus_hint"
