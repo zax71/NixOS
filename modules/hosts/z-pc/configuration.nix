@@ -16,7 +16,6 @@
         unstable
         bluetooth
         nix-options
-        awesomewm
         niri
 
         keyring

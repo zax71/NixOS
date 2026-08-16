@@ -5,7 +5,6 @@
       gvfs.enable = true;
       displayManager = {
         sddm.enable = true;
-        #defaultSession = "none+awesome";
       };
     };
   };
