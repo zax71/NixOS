@@ -18,6 +18,7 @@
         nix-options
         niri
         shares
+        virtualisation
 
         keyring
 
@@ -36,8 +37,6 @@
         ./../../../legacy/nixos/modules/networking.nix
         ./../../../legacy/nixos/modules/printing.nix
         ./../../../legacy/nixos/modules/sound.nix
-        ./../../../legacy/nixos/modules/virtualisation.nix
-        ./../../../legacy/nixos/modules/xdg-portal.nix
         ./../../../legacy/nixos/modules/tpm.nix
       ];
 
