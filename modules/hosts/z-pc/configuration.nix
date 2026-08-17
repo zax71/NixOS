@@ -17,6 +17,7 @@
         bluetooth
         nix-options
         niri
+        shares
 
         keyring
 
@@ -24,6 +25,7 @@
         desktopProgrammes
         developmentProgrammes
         gameProgrammes
+
       ]
       ++ [
         inputs.disko.nixosModules.disko
@@ -33,7 +35,6 @@
         #./../../../legacy/nixos/modules/flatpak.nix
         ./../../../legacy/nixos/modules/networking.nix
         ./../../../legacy/nixos/modules/printing.nix
-        ./../../../legacy/nixos/modules/shares
         ./../../../legacy/nixos/modules/sound.nix
         ./../../../legacy/nixos/modules/virtualisation.nix
         ./../../../legacy/nixos/modules/xdg-portal.nix
