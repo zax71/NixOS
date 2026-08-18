@@ -36,7 +36,6 @@
         #./../../../legacy/nixos/modules/flatpak.nix
         ./../../../legacy/nixos/modules/networking.nix
         ./../../../legacy/nixos/modules/printing.nix
-        ./../../../legacy/nixos/modules/sound.nix
         ./../../../legacy/nixos/modules/tpm.nix
       ];
 

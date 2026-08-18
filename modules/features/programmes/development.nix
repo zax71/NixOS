@@ -4,6 +4,10 @@
       java-package
     ];
 
+    networking.firewall.allowedTCPPorts = [
+      5173 # Vite web dev host to LAN
+    ];
+
     programs.ghidra = {
       enable = true;
       gdb = true;
