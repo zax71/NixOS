@@ -89,6 +89,9 @@
       inkscape
       krita
       hugin # Panorama Stitcher
+      unstable.siril # Astrophoto image processor
+      python3 # Requirement for sirl, see nixpkgs#555759
+
     ];
   };
 }
