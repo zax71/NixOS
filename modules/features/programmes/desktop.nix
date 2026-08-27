@@ -40,8 +40,6 @@
       davinci-resolve # Video editor
       kdePackages.kdenlive # Video editor
       lmms
-      magicq # Chamsys lighting software
-      qlcplus # lighting software
 
       ## Core desktop apps
       kitty # Terminal
@@ -71,12 +69,11 @@
       kicad
 
       wireshark
-      unstable.kmidimon # MIDI packet sniffer
       parabolic # Download YouTube videos
       via # Keyboard configuiration
 
       ## OpenStreetMap
-      josm # Editor
+      unstable.josm # Editor
       comaps # Renderer
 
       ## Art

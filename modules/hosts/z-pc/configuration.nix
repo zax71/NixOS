@@ -7,10 +7,10 @@
       [
         zax-base # Setup user and home manager
         base-desktop # Setup desktop specific services
+        base
 
         z-pc
         themeQT
-        unstable
         secrets
         udev
         unstable
@@ -19,7 +19,6 @@
         niri
         shares
         virtualisation
-        base
 
         keyring
 
@@ -27,6 +26,7 @@
         desktopProgrammes
         developmentProgrammes
         gameProgrammes
+        theatreProgrammes
 
       ]
       ++ [
@@ -35,9 +35,6 @@
 
         # Legacy imports
         #./../../../legacy/nixos/modules/flatpak.nix
-        ./../../../legacy/nixos/modules/networking.nix
-        ./../../../legacy/nixos/modules/printing.nix
-        ./../../../legacy/nixos/modules/tpm.nix
       ];
   };
 

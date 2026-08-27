@@ -22,5 +22,18 @@
     boot.extraModprobeConfig = ''
       options snd_hda_intel enable=0,1
     '';
+
+    # Printing
+    services = {
+      printing = {
+        enable = true; # CUPS
+        drivers = [ pkgs.hplip ];
+      };
+      avahi = {
+        enable = true;
+        nssmdns4 = true;
+        openFirewall = true;
+      };
+    };
   };
 }
