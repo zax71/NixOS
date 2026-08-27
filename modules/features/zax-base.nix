@@ -84,6 +84,7 @@
           helix
           noctalia
           screenshots
+          kitty
         ]
         ++ [
           ../../legacy/home-manager/home.nix
