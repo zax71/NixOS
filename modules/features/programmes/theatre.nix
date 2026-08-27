@@ -1,5 +1,27 @@
 {
+  self,
+  inputs,
+  ...
+}:
+{
   flake.modules.nixos.theatreProgrammes = { pkgs, ... }: {
+    imports = [
+      inputs.nix-flatpak.nixosModules.nix-flatpak
+    ];
+
+    # LiSP is not in Nixpkgs :(
+    services.flatpak = {
+      enable = true;
+      packages = [
+        "org.linuxshowplayer.LinuxShowPlayer"
+      ];
+
+      # Update Flatpak packages weekly
+      update.auto = {
+        enable = true;
+        onCalendar = "weekly"; # Default value
+      };
+    };
 
     networking.firewall = {
       allowedUDPPorts = [
