@@ -10,7 +10,6 @@
         base
 
         z-pc
-        themeQT
         secrets
         udev
         unstable

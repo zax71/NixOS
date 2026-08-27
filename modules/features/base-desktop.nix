@@ -1,5 +1,14 @@
-{ inputs, lib, ... }: {
+{ self, inputs, ... }: {
   flake.modules.nixos.base-desktop = { pkgs, ... }: {
+
+    # Setup theming
+    imports = with self.modules.nixos; [
+      themeQT
+    ];
+    home-manager.users.zax.imports = with inputs.self.modules.homeManager; [
+      themeGTK
+    ];
+
     services = {
       udisks2.enable = true; # USB drive auto mounting
       gvfs.enable = true;

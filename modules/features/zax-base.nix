@@ -75,27 +75,25 @@
       ...
     }:
     {
-      imports =
-        with inputs.self.modules.homeManager;
-        [
-          discord
-          shell
-          yazi
-          helix
-          noctalia
-          screenshots
-          kitty
-          vscodium
-        ]
-        ++ [
-          ../../legacy/home-manager/home.nix
-        ];
+      imports = with inputs.self.modules.homeManager; [
+        discord
+        shell
+        yazi
+        helix
+        noctalia
+        screenshots
+        kitty
+        vscodium
+      ];
 
       home = {
         username = "zax";
         homeDirectory = "/home/zax";
         stateVersion = "26.05";
       };
+
+      # idrk where to put this
+      services.mpris-proxy.enable = true;
 
       # I'd love a neater solution to this
       # nixpkgs.config.allowUnfreePredicate =
