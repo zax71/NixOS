@@ -85,6 +85,7 @@
           noctalia
           screenshots
           kitty
+          vscodium
         ]
         ++ [
           ../../legacy/home-manager/home.nix
