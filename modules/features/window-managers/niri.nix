@@ -5,6 +5,10 @@
       package = self.packages.${pkgs.stdenv.hostPlatform.system}.myNiri;
     };
 
+    home-manager.users.zax.imports = with inputs.self.modules.homeManager; [
+      rofi
+    ];
+
     environment.systemPackages = with pkgs; [
       wl-clipboard # Fix wayland clipboard
     ];
@@ -43,7 +47,13 @@
           binds = {
             "Mod+Return".spawn-sh = lib.getExe pkgs.kitty;
             "Mod+Q".close-window = { };
-            "Mod+Space".spawn-sh = "noctalia msg panel-toggle launcher";
+
+            # "Mod+Space".spawn-sh = "noctalia msg panel-toggle launcher";
+            # Use Rofi as it launches faster than the Noctalia launcher
+            "Mod+Space".spawn-sh = "rofi -show drun";
+            "Mod+period".spawn-sh = "rofi -show emoji";
+            "Mod+C".spawn-sh = "rofi -show calc";
+
             "Mod+b".spawn-sh = lib.getExe pkgs.firefox;
             "Mod+Shift+s".spawn-sh = "grim - | satty -f -";
             "Mod+Shift+Slash".show-hotkey-overlay = { };
@@ -51,7 +61,7 @@
             "Mod+F".maximize-column = { };
             "Mod+G".fullscreen-window = { };
             "Mod+Control+Space".toggle-window-floating = { };
-            "Mod+C".center-column = { };
+            "Mod+M".center-column = { };
             "Mod+O".move-window-to-monitor-left = { };
 
             "Mod+Left".focus-column-left = { };
