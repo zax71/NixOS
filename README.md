@@ -19,6 +19,15 @@ This is my [NixOS](https://nixos.org/) configuration using the Dendritic patern.
 Outdated
 ![Screenshot of desktop](/.github/assets/showcase.png)
 
+## Instructions to add new machines
+
+1. Create a new folder in ./modules/hosts/ and copy over the files from another machine as an example, making nessicary changes, including modifying the `disko.nix` file.
+2. Download the [minimal NixOS installer image](https://nixos.org/download/#nixos-iso) and flash it to a USB drive, I like to use [caligula](https://github.com/ifd3f/caligula).
+3. Boot this iso
+4. git clone this repo to the new machine in a temp directory
+5. run `nixos-generate-config --show-hardware-config /mnt > file.nix` to generate the hardware configuration for that device, then modify it to be dendritic and add it to ./modules/hosts/this-machiene/
+6. Run `sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko/latest -- --mode destroy,format,mount /path/to/disko.nix` to partition the drive.
+7. Finally run `nixos-install` and `reboot`.
 ---
 
 **No artificial intelligence was used in the making of this.**
