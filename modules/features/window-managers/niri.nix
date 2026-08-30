@@ -38,6 +38,9 @@
                 max-scroll-amount = "10%";
               };
             };
+            touchpad = {
+              natural-scroll = { };
+            };
           };
 
           prefer-no-csd = { };
