@@ -1,7 +1,6 @@
 {
   flake.modules.nixos.base = { ... }: {
 
-    networking.hostName = "z-pc";
     # Use GRUB
     boot.loader = {
       efi = {
@@ -10,7 +9,6 @@
       grub = {
         enable = true;
         efiSupport = true;
-        device = "/dev/sda";
       };
     };
 

@@ -32,6 +32,9 @@
         inputs.disko.nixosModules.disko
         self.diskoConfigurations.z-laptop
       ];
+
+    networking.hostName = "z-laptop";
+    boot.loader.grub.device = "/dev/nvme0n1";
   };
 
 }

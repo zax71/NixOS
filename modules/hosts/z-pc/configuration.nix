@@ -35,6 +35,8 @@
         # Legacy imports
         #./../../../legacy/nixos/modules/flatpak.nix
       ];
+    networking.hostName = "z-pc";
+    boot.loader.grub.device = "/dev/sda";
   };
 
 }
