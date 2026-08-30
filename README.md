@@ -25,7 +25,7 @@ Outdated
 2. Download the [minimal NixOS installer image](https://nixos.org/download/#nixos-iso) and flash it to a USB drive, I like to use [caligula](https://github.com/ifd3f/caligula).
 3. Boot this iso
 4. git clone this repo to the new machine in a temp directory
-5. Run `nixos-generate-config --show-hardware-config /mnt > file.nix` to generate the hardware configuration for that device, then modify it to be dendritic and add it to ./modules/hosts/this-machiene/
+5. Run `nixos-generate-config --show-hardware-config --no-filesystems > hardware.nix` to generate the hardware configuration for that device, then modify it to be dendritic and add it to ./modules/hosts/this-machiene/
 6. Run the following to partition the drive
 ```sh
 sudo nix \
