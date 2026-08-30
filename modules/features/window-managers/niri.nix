@@ -39,7 +39,15 @@
               };
             };
             touchpad = {
-              natural-scroll = { };
+              # Tap to click
+              tap = { };
+              # Disable touchpad while typing
+              dwt = { };
+              # Two finger tap right click, three for middle
+              tap-button-map = "left-right-middle";
+              click-method = "clickfinger";
+
+              # natural-scroll = { };
             };
           };
 
