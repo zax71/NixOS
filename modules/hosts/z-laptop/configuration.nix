@@ -7,6 +7,7 @@
       [
         zax-base # Setup user and home manager
         base-desktop # Setup desktop specific services
+        base-laptop # Packages required for laptops
         base
 
         z-laptop
