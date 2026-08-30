@@ -34,7 +34,8 @@ sudo nix \
   -m destroy,format,mount \
   -f .#<device name>
 ```
-7. Finally run `nixos-install` and `reboot`.
+7. Run `git add -A` so that your hardware config can be seen by nix
+7. Finally run `nixos-install --flake .#<device name>` and `reboot`.
 ---
 
 **No artificial intelligence was used in the making of this.**
