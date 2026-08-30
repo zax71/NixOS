@@ -51,6 +51,14 @@
             };
             "tinymist" = {
               command = lib.getExe pkgs.tinymist;
+              config = {
+                preview.background.enabled = true;
+                preview.background.args = [
+                  "--data-plane-host=127.0.0.1:23635"
+                  "--invert-colors=never"
+                  "--open"
+                ];
+              };
             };
             "rust-analyzer" = {
               command = lib.getExe pkgs.rust-analyzer;
