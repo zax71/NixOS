@@ -32,7 +32,7 @@ sudo nix \
 --experimental-features "nix-command flakes" \
   run github:nix-community/disko -- \
   -m destroy,format,mount \
-  -f github:zax71/nixos#diskoConfigurations.<device name>
+  -f .#<device name>
 ```
 7. Finally run `nixos-install` and `reboot`.
 ---
