@@ -62,6 +62,9 @@
             };
             "rust-analyzer" = {
               command = lib.getExe pkgs.rust-analyzer;
+              config = {
+                check.command = lib.getExe pkgs.clippy;
+              };
             };
             "ty" = {
               command = lib.getExe pkgs.ty;
