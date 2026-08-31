@@ -47,7 +47,7 @@
               tap-button-map = "left-right-middle";
               click-method = "clickfinger";
 
-              # natural-scroll = { };
+              # natural-scroll = { }; # Doesn't seem to function as per niri#3403
             };
           };
 
