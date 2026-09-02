@@ -198,19 +198,19 @@ directory = "/home/zax/nixos/config/wallpapers/"
 per_monitor_directories = true
 
     [wallpaper.last]
-    path = "/home/zax/Pictures/Wallpapers/left/sunsetV2.png"
+    path = "/home/zax/nixos/config/wallpapers/right/sunsetV2.png"
 
     [wallpaper.monitor.DP-1]
-    directory = "/home/zax/Pictures/Wallpapers/left"
+    directory = "/home/zax/nixos/config/wallpapers/left"
 
     [wallpaper.monitor.HDMI-A-1]
     directory = "/home/zax/nixos/config/wallpapers/right"
 
     [wallpaper.monitors.DP-1]
-    path = "/home/zax/Pictures/Wallpapers/left/sunsetV2.png"
+    path = "/home/zax/nixos/config/wallpapers/left/sunsetV2.png"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/zax/Pictures/Wallpapers/right/sunsetV2.png"
+    path = "/home/zax/nixos/config/wallpapers/right/sunsetV2.png"
 
 [widget.control-center]
 enabled = false
@@ -246,4 +246,6 @@ enabled = false
 
 [widget.workspaces]
 hide_when_empty = true
+label_source = "name"
+max_label_chars = 2
 style = "focus_hint"

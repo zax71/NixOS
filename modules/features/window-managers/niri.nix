@@ -27,6 +27,10 @@
         settings = {
           spawn-at-startup = [
             "noctalia"
+            "discord"
+            "signal-desktop"
+            "fluffychat"
+            "thunderbird"
           ];
 
           xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
@@ -56,6 +60,35 @@
           prefer-no-csd = { };
 
           layout.gaps = 5;
+
+          workspaces = {
+            "chat" = {
+              open-on-output = "HDMI-1";
+            };
+          };
+
+          window-rules = [
+            {
+              matches = [ { app-id = "discord"; } ];
+              open-on-workspace = "chat";
+              open-maximized = true;
+            }
+            {
+              matches = [ { app-id = "signal"; } ];
+              open-on-workspace = "chat";
+              open-maximized = true;
+            }
+            {
+              matches = [ { app-id = "thunderbird"; } ];
+              open-on-workspace = "chat";
+              open-maximized = true;
+            }
+            {
+              matches = [ { app-id = "fluffychat"; } ];
+              open-on-workspace = "chat";
+              open-maximized = true;
+            }
+          ];
 
           binds = {
             "Mod+Return".spawn-sh = lib.getExe pkgs.kitty;
@@ -91,6 +124,9 @@
             "Mod+Ctrl+Right".set-column-width = "+5%";
             "Mod+Ctrl+Up".set-window-height = "-5%";
             "Mod+Ctrl+Down".set-window-height = "+5%";
+
+            "Mod+Alt+Up".move-workspace-up = { };
+            "Mod+Alt+Down".move-workspace-down = { };
 
             "Mod+1".focus-workspace = "w0";
             "Mod+2".focus-workspace = "w1";
