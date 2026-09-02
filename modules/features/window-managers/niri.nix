@@ -51,6 +51,8 @@
             };
           };
 
+          hotkey-overlay.skip-at-startup = { };
+
           prefer-no-csd = { };
 
           layout.gaps = 5;
