@@ -33,9 +33,15 @@
           ];
           userSettings = {
             python.defaultInterpreterPath = lib.getExe pkgs.python315;
-            black-formatter.path = [
-              (lib.getExe pkgs.black)
-            ];
+            black-formatter = {
+              path = [
+                (lib.getExe pkgs.unstable.black)
+              ];
+              interpreter = [
+                (lib.getExe pkgs.python314) # Not at latest, see https://github.com/microsoft/vscode-black-formatter/issues/798
+              ];
+
+            };
             terminal.integrated.defaultProfile.linux = lib.getExe pkgs.zsh;
             workbench.startupEditor = "none";
             git.autofetch = true;
