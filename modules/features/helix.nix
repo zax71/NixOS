@@ -13,6 +13,7 @@
           typstyle
           ty
           ruff
+          superhtml
         ];
         settings = {
           theme = "everforest_dark";
@@ -72,6 +73,11 @@
             "ruff" = {
               command = lib.getExe pkgs.ruff;
             };
+            "emmet" = {
+              command = lib.getExe pkgs.emmet-language-server;
+              args = [ "--stdio" ];
+            };
+
           };
           language = [
             {
@@ -101,6 +107,22 @@
                 "ruff"
               ];
             }
+            {
+              name = "html";
+              auto-format = true;
+              formatter = {
+                command = lib.getExe pkgs.prettier;
+                args = [
+                  "--parser"
+                  "html"
+                ];
+                language-servers = [
+                  "superhtml"
+                  "emmet"
+                ];
+              };
+            }
+
           ];
         };
       };
