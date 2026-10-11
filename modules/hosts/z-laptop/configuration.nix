@@ -36,6 +36,9 @@
 
     networking.hostName = "z-laptop";
     boot.loader.grub.device = "/dev/nvme0n1";
+
+    hardware.enableAllFirmware = true;
+    boot.kernelParams = [ "snd-intel-dspcfg.dsp_driver=1" ];
   };
 
 }

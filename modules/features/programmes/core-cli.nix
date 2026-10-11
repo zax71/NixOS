@@ -20,7 +20,10 @@
 
       ## Toys
       asciiquarium-transparent
+      fortune
       neo-cowsay
+      sl
+      cmatrix
 
       ## CLI utilities
       cmus # Terminal music player
