@@ -23,7 +23,7 @@
       ## Browsers
       firefox
       epiphany # Ugh, webkit
-      # chromium # Web dev is great...STOP BEING MY DEFAULT BROWSER FFS
+      chromium # Web dev is great...STOP BEING MY DEFAULT BROWSER FFS
 
       ## Social
       dino # XMPP client
@@ -75,6 +75,7 @@
       ## OpenStreetMap
       unstable.josm # Editor
       comaps # Renderer
+      kdePackages.marble
 
       ## Art
       aseprite
