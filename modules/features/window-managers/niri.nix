@@ -46,12 +46,12 @@
               # Tap to click
               tap = { };
               # Disable touchpad while typing
-              dwt = { };
+              # dwt = { };
               # Two finger tap right click, three for middle
               tap-button-map = "left-right-middle";
               click-method = "clickfinger";
 
-              # natural-scroll = { }; # Doesn't seem to function as per niri#3403
+              natural-scroll = { }; # Doesn't seem to function as per niri#3403
             };
           };
 
