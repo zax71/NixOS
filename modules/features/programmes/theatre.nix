@@ -30,7 +30,7 @@
       ];
     };
     environment.systemPackages = with pkgs; [
-      magicq # Chamsys lighting software
+      unstable.magicq # Chamsys lighting software
       qlcplus # lighting software
       unstable.kmidimon # MIDI packet sniffer
     ];
