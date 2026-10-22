@@ -72,17 +72,18 @@
       parabolic # Download YouTube videos
       via # Keyboard configuiration
 
-      ## OpenStreetMap
+      ## Mapping (mostly OSM)
       unstable.josm # Editor
       comaps # Renderer
       kdePackages.marble
+      unstable.qgis
 
       ## Art
       aseprite
       drawio
       unstable.gimp3
       nomacs # Image viewer
-      darktable
+      darktable # I'd love to use the features in unstable but I can't do that until #576492 is fixed
       rawtherapee
       inkscape
       krita
