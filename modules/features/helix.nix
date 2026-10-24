@@ -77,6 +77,10 @@
               command = lib.getExe pkgs.emmet-language-server;
               args = [ "--stdio" ];
             };
+            "typos" = {
+              # Spellchecker
+              command = lib.getExe pkgs.typos-lsp;
+            };
 
           };
           language = [
@@ -90,7 +94,10 @@
               name = "typst";
               formatter.command = lib.getExe pkgs.typstyle;
               auto-format = true;
-              language-servers = [ "tinymist" ];
+              language-servers = [
+                "tinymist"
+                "typos"
+              ];
             }
             {
               name = "rust";
