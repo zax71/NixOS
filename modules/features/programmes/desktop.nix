@@ -56,8 +56,8 @@
       obsidian
       zotero
       texliveFull
-      typst
-      tinymist # Typst LSP
+      unstable.typst
+      unstable.tinymist # Typst LSP
 
       ## Wine
       bottles # Run Windows apps
