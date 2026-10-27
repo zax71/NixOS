@@ -30,11 +30,13 @@
       sshfs
       lazygit
       yt-dlp
-      ffmpeg
+      ffmpeg-full
       caligula # Disk burning tool
       appimage-run # Use this to run Appimages, they don't work by default
       bc # A calculator, required for the imagemagick multicrop script
       presenterm # CLI presentation tool
+      dust # disk usage tool
+      ripgrep
 
     ];
   };
