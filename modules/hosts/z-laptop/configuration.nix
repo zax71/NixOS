@@ -19,6 +19,7 @@
         niri
         shares
         virtualisation
+        networking
 
         keyring
 
