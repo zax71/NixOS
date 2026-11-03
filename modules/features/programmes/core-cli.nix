@@ -17,6 +17,7 @@
       vulkan-tools
       exiftool
       difftastic # A tool to create better diffs
+      busybox
 
       ## Toys
       asciiquarium-transparent
