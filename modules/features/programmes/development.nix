@@ -38,7 +38,7 @@
       android-tools
       thonny
       unstable.bruno # Web request IDE
-      unstable.yaak # Web request IDE
+      # unstable.yaak # Web request IDE
       unstable.rpi-imager # Make Raspberry Pi SD card OS images
       unstable.vscodium.fhs # Goodbye Microsoft
     ];
