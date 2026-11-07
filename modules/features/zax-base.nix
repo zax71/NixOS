@@ -20,6 +20,10 @@
       };
     };
     programs.zsh.enable = true;
+
+    # Make brightness keys on keyboard work
+    services.illum.enable = true;
+
     fonts = {
       packages = with pkgs; [
         monocraft
