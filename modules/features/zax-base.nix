@@ -11,6 +11,7 @@
         uid = 1000;
         extraGroups = [
           "wheel"
+          "networkmanager"
           "audio"
           "docker"
           "dialout"
