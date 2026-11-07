@@ -45,7 +45,7 @@
     # Networking is prety important
     networking.networkmanager.enable = true;
 
-    time.timeZone = "Europe/London";
+    time.timeZone = "Australia/Sydney";
     i18n.defaultLocale = "en_GB.UTF-8";
     console.keyMap = "uk";
 
